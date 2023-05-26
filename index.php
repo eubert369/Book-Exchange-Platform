@@ -13,7 +13,7 @@
     <h1 class="text-white text-center mt-4 mb-5">Book Exchange Platform</h1>
     <div class="row">
         <div class="container border col-6 mx-auto text-center rounded-5 p-3 mt-5">
-            <h3 class="text-white fs-2">Login</h3>
+            <h3 class="text-white fs-2 mb-3">Login</h3>
             <form action="#">
                 <input class="rounded-3 p-2 w-75 mt-2" type="text" placeholder="Username">
                 <input class="rounded-3 p-2 w-75 mt-3" type="password" placeholder="Password">
