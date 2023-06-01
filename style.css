@@ -1,0 +1,41 @@
+#navbar {
+    background-color: #855b37;
+}
+#home:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#guidelines:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#how-to-use:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#faqs:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#why-us:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#about-us:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* #contain-text {
+    background-color: rgba(red, green, blue, 0.8);
+} */
+/* #bg-img {
+    height: 100vh;
+} */
+
+
