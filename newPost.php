@@ -18,7 +18,7 @@
     <!-- insert query -->
     <?php
 
-        $post_title = $post_des = $post_price = $post_category = $post_condition = "";
+        $post_title = $post_des = $post_price = $post_category = $post_condition = $post_image = $post_type = "";
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $post_title = $_POST["title"];
@@ -27,11 +27,13 @@
             $post_category = $_POST["category"];
             $post_condition = $_POST["condition"];
 
+            $post_type = "sale";
 
-            $insertQuery = "INSERT INTO posttable (post_title, post_des, post_price, post_category, post_condition) VALUES (?, ?, ?, ?, ?)";
+
+            $insertQuery = "INSERT INTO posttable (post_title, post_des, post_price, post_category, post_condition, post_type) VALUES (?, ?, ?, ?, ?, ?)";
 
             $stmt = $conn->prepare($insertQuery);
-            $stmt->bind_param("sssss", $post_title, $post_des, $post_price, $post_category, $post_condition);
+            $stmt->bind_param("ssssss", $post_title, $post_des, $post_price, $post_category, $post_condition, $post_type);
             $stmt->execute();
         }
 
@@ -49,7 +51,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav container-fluid justify-content-end">
                         <a id="home" class="nav-link active text-white mx-3 fs-5" aria-current="page" href="homepage.php"><img class="img" src="assets/home-icon.png" alt="home" width="30"></a>
-                        <a id="how-to-use" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/book-barter.png" alt="barter" width="30"></a>
+                        <a id="how-to-use" class="nav-link text-white mx-3 fs-5" href="bookBarter.php"><img class="img" src="assets/book-barter.png" alt="barter" width="30"></a>
                         <a id="faqs" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/lending-hub.png" alt="lending hub" width="30"></a>
                         <a id="why-us" class="nav-link text-white mx-3 fs-5" href="newPost.php"><img class="img" src="assets/sale-icon.png" alt="lending hub" width="30"></a>
                         <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/friends.png" alt="lending hub" width="30"></a>
