@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="myStylee.css">
-    
+    <link relu="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Create Post</title>
 </head>
 <body>
@@ -35,29 +37,33 @@
         <div id="newPostNav">
             <div id="logo"></div>
             <ul>
-                <li><a href="homepage.php">Home</a></li>
+                <li><a href="homepage.php" style="text-decoration: none;">Home</a></li>
                 <li>Explore</li>
                 <li>
-                    <a href="newPost.php" id="clickMe">+</a>
+                    <a href="newPost.php" id="clickMe" style="text-decoration: underline;">Create Post</a>
                 </li>
                 <li>
                     <div id="userNameNavCtn">
-                        <div id="userNameCtn"></div>
+                        <div id="userNameCtn">Profile</div>
                         <div id="userNameDropDown"></div>
                     </div>
                 </li>
+                <li onclick="logout()" id="logoutBtn">Logout</li>
             </ul>
         </div>
 
         <div id="postFormCtn">
+            <div id="myContainer">
+                
+            </div>
             <form action="" method="post" id="postForm">
-                <label for="title">Title</label>
+                <label for="title" class="postHeader">Title</label>
                 <input type="text" placeholder="Enter Title" id="title" name="title">
-                <label for="description">Description</label>
+                <label for="description" class="postHeader">Description</label>
                 <textarea placeholder="Describe your item" id="description" name="description" rows="10" cols="40"></textarea>
-                <label for="price">Price (optional)</label>
+                <label for="price" class="postHeader">Price (optional)</label>
                 <input type="text" id="price" name="price">
-                <label for="fiction">Category</label>
+                <label for="fiction" class="postHeader">Category</label>
                 <div>
                     <input type="radio" value="fiction" name="category" id="fiction">
                     <label for="fiction">Fiction</label>
@@ -69,7 +75,7 @@
                     <label for="fiction">Children</label>
                 </div>
 
-                <label for="title">Item Condition</label>
+                <label for="condition" class="postHeader">Item Condition</label>
                 <div>
                     <input type="radio" value="new" name="condition" id="new">
                     <label for="new">New</label>
@@ -80,12 +86,15 @@
                     <input type="radio" value="fair" name="condition" id="fair">
                     <label for="fiction">Fair</label>
                 </div>
+                <div onclick="openFileUploader()" id="addPhotos">+ Add photos</div>
 
-                <input type="submit">
+                <button type="submit" id="postButton">Post</button>
             </form>
         </div>
     </div>
 
+
+    <script src="app.js"></script>
     
 </body>
 </html>
