@@ -40,6 +40,7 @@
                         <a id="faqs" class="nav-link text-white mx-3 fs-5" href="#">FAQs</a>
                         <a id="why-us" class="nav-link text-white mx-3 fs-5" href="#">Why Us?</a>
                         <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#">About Us</a>
+                        <a id="about-us" class="nav-link text-white mx-3 fs-5 fw-bold" href="login.php">Login</a>
                     </div>
                 </div>
             </div>

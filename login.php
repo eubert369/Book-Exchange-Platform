@@ -21,7 +21,7 @@
                 <input class="input_text rounded-3 p-2 w-75 mt-2" type="text" placeholder="Username">
                 <input class="input_text rounded-3 p-2 w-75 mt-3" type="password" placeholder="Password">
                 <div class="col-auto mt-4 mb-3">
-                    <button class="btn bg-white" type="submit">Login</button>
+                <a class="btn bg-white border" href="homepage.php" type="submit">Login</a>
                 </div>
                 <p class=""><a href="signUp.php">Signup</a> if you don't have an account.</p>
             </form>
