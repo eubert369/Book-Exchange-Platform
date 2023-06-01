@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2023 at 08:07 PM
+-- Generation Time: Jun 02, 2023 at 01:51 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -33,15 +33,18 @@ CREATE TABLE `posttable` (
   `post_des` varchar(200) NOT NULL,
   `post_price` varchar(50) NOT NULL,
   `post_category` varchar(50) NOT NULL,
-  `post_condition` varchar(50) NOT NULL
+  `post_condition` varchar(50) NOT NULL,
+  `post_image` blob NOT NULL,
+  `post_type` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `posttable`
 --
 
-INSERT INTO `posttable` (`post_id`, `post_title`, `post_des`, `post_price`, `post_category`, `post_condition`) VALUES
-(7, 'Hotdog', 'asd', '123', 'non-Fiction', 'like new');
+INSERT INTO `posttable` (`post_id`, `post_title`, `post_des`, `post_price`, `post_category`, `post_condition`, `post_image`, `post_type`) VALUES
+(20, 'All stars are bright', 'heavy, no scratches', '2, 500 php', 'fiction', 'new', '', 'sale'),
+(21, 'To Kill a Mocking Bird', 'Well cared, bought it 2 months ago', 'I prefer romance books', 'fiction', 'like new', '', 'barter');
 
 -- --------------------------------------------------------
 
@@ -54,17 +57,6 @@ CREATE TABLE `usertable` (
   `username` varchar(30) NOT NULL,
   `password` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `usertable`
---
-
-INSERT INTO `usertable` (`id`, `username`, `password`) VALUES
-(5, '', ''),
-(6, 'Cham', 'Happyme123'),
-(7, 'Ezechiela', 'Ilovetacloban'),
-(8, 'Ezechiela', 'Ilovetacloban'),
-(9, 'Ezechiela', 'chammy');
 
 --
 -- Indexes for dumped tables
@@ -90,13 +82,13 @@ ALTER TABLE `usertable`
 -- AUTO_INCREMENT for table `posttable`
 --
 ALTER TABLE `posttable`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `usertable`
 --
 ALTER TABLE `usertable`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
