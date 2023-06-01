@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="myStylee.css">
     <link relu="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/white-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
     <title>Create Post</title>
 </head>
 <body>
@@ -33,29 +37,34 @@
 
     ?>
 
-    <div id="newPostOuterContainer">
-        <div id="newPostNav">
-            <div id="logo"></div>
-            <ul>
-                <li><a href="homepage.php" style="text-decoration: none;">Home</a></li>
-                <li>Explore</li>
-                <li>
-                    <a href="newPost.php" id="clickMe" style="text-decoration: underline;">Create Post</a>
-                </li>
-                <li>
-                    <div id="userNameNavCtn">
-                        <div id="userNameCtn">Profile</div>
-                        <div id="userNameDropDown"></div>
+    <div class="container-fluid px-0" id="newPostOuterContainer">
+        <nav id="navbar" class="navbar navbar-expand-lg position-absolute w-100 top-0">
+            <div class="container-fluid px-5">
+                <a class="navbar-brand text-center" href="#">
+                    <img id="logo" class="img-fluid shadow" src="assets/white-logo.png" alt="Bootstrap" width="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav container-fluid justify-content-end">
+                        <a id="home" class="nav-link active text-white mx-3 fs-5" aria-current="page" href="homepage.php"><img class="img" src="assets/home-icon.png" alt="home" width="30"></a>
+                        <a id="how-to-use" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/book-barter.png" alt="barter" width="30"></a>
+                        <a id="faqs" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/lending-hub.png" alt="lending hub" width="30"></a>
+                        <a id="why-us" class="nav-link text-white mx-3 fs-5" href="newPost.php"><img class="img" src="assets/sale-icon.png" alt="lending hub" width="30"></a>
+                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/friends.png" alt="lending hub" width="30"></a>
+                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/book-club.png" alt="lending hub" width="30"></a>
+                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/location.png" alt="lending hub" width="30"></a>
+                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/messaging.png" alt="lending hub" width="30"></a>
+                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/notif-icon.png" alt="lending hub" width="30"></a>
+                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="login.php"><img class="img" src="assets/profile.png" alt="lending hub" width="30"></a>
+                        <input class="form-control w-25 rounded-pill" type="search" placeholder="Search" aria-label="Search">
                     </div>
-                </li>
-                <li onclick="logout()" id="logoutBtn">Logout</li>
-            </ul>
-        </div>
+                </div>
+            </div>
+        </nav>
 
         <div id="postFormCtn">
-            <div id="myContainer">
-                
-            </div>
             <form action="" method="post" id="postForm">
                 <label for="title" class="postHeader">Title</label>
                 <input type="text" placeholder="Enter Title" id="title" name="title">
@@ -94,7 +103,7 @@
     </div>
 
 
+    <script src="bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
-    
 </body>
 </html>
