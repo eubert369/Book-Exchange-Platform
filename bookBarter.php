@@ -18,7 +18,7 @@
     <!-- insert query -->
     <?php
 
-        $post_title = $post_des = $post_price = $post_category = $post_condition = $post_image = $post_type = "";
+        $post_title = $post_des = $post_price = $post_category = $post_condition = $post_type =  "";
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $post_title = $_POST["title"];
@@ -26,9 +26,7 @@
             $post_price = $_POST["price"];
             $post_category = $_POST["category"];
             $post_condition = $_POST["condition"];
-
-            $post_type = "sale";
-
+            $post_type = "barter";
 
             $insertQuery = "INSERT INTO posttable (post_title, post_des, post_price, post_category, post_condition, post_type) VALUES (?, ?, ?, ?, ?, ?)";
 
@@ -51,7 +49,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav container-fluid justify-content-end">
                         <a id="home" class="nav-link active text-white mx-3 fs-5" aria-current="page" href="homepage.php"><img class="img" src="assets/home-icon.png" alt="home" width="30"></a>
-                        <a id="how-to-use" class="nav-link text-white mx-3 fs-5" href="bookBarter.php"><img class="img" src="assets/book-barter.png" alt="barter" width="30"></a>
+                        <a id="how-to-use" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/book-barter.png" alt="barter" width="30"></a>
                         <a id="faqs" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/lending-hub.png" alt="lending hub" width="30"></a>
                         <a id="why-us" class="nav-link text-white mx-3 fs-5" href="newPost.php"><img class="img" src="assets/sale-icon.png" alt="lending hub" width="30"></a>
                         <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/friends.png" alt="lending hub" width="30"></a>
@@ -72,8 +70,8 @@
                 <input type="text" placeholder="Enter Title" id="title" name="title">
                 <label for="description" class="postHeader">Description</label>
                 <textarea placeholder="Describe your item" id="description" name="description" rows="10" cols="40"></textarea>
-                <label for="price" class="postHeader">Price (optional)</label>
-                <input type="text" id="price" name="price">
+                <label for="price" class="postHeader">Preferred</label>
+                <textarea placeholder="Describe what you prefer in bartering" id="preferredBy" name="price" rows="5" cols="40"></textarea>
                 <label for="fiction" class="postHeader">Category</label>
                 <div>
                     <input type="radio" value="fiction" name="category" id="fiction">
