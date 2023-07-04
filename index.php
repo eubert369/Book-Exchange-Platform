@@ -31,9 +31,10 @@
                                 Guidelines
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Selling guidelines</a></li>
-                                <li><a class="dropdown-item" href="#">Exchange guidelines</a></li>
-                                <li><a class="dropdown-item" href="#">Borrow books guidelines</a></li>
+                                <li><a class="dropdown-item" href="#">Book Swapping</a></li>
+                                <li><a class="dropdown-item" href="#">Book Renting</a></li>
+                                <li><a class="dropdown-item" href="#">Book Selling</a></li>
+                                <li><a class="dropdown-item" href="#">Joining Communities</a></li>
                             </ul>
                         </li>
                         <a id="how-to-use" class="nav-link text-white mx-3 fs-5" href="#">How to use</a>
@@ -46,17 +47,19 @@
             </div>
         </nav>
         <div class="container-fluid px-0 bg-black">
-            <img id="bg-img" src="assets/index-bg.jpeg" alt="background image" class="img-fluid">
-            <div class="row">
-                <div class="position-absolute top-50 start-50 translate-middle">
+            <div class="min-vh-100">
+                <img id="bg-img" src="assets/index-bg.jpeg" alt="background image" class="img-fluid min-vh-100">
+                <div class="position-absolute top-50 start-50 translate-middle w-100">
                     <div id="contain-text" class=" p-3 w-100" style="opacity: .8;">
                         <h1 class="text-center text-light fw-bold" style="font-size: 50px;">Join us in unlocking the literary treasures<br>of our network</h1>
                         <p class="text-center text-light fs-3">Journey alongside fellow readers in unlocking the magic of literature</p>
-                        <a id="join" href="signUp.php" class="btn rounded-pill fs-4 fw-bold bg-light position-absolute start-0 start-50 translate-middle-x w-25 p-1 mt-2">Join</a>
+                        <a id="join" href="./components/welcome.php" class="btn rounded-pill fs-4 fw-bold bg-light position-absolute start-0 start-50 translate-middle-x w-25 p-1 mt-2">Join</a>
                     </div>
                 </div>
             </div>
-
+            <div class="min-vh-100">
+                <img src="assets/index_2.png" alt="background" class="img-fluid min-vh-100">
+            </div>
         </div>
     </div>
 </body>
