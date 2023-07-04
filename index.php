@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/white-logo.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="./components/style.css">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
 </head>
 <title>Index</title>
@@ -15,7 +15,7 @@
 
 <body>
     <div class="container-fluid px-0">
-        <nav id="navbar" class="navbar navbar-expand-lg position-absolute w-100 top-0">
+        <nav id="navbar" class="navbar navbar-expand-lg position-absolute w-100 top-0" style="background-color: #DEA057;">
             <div class="container-fluid px-5">
                 <a class="navbar-brand text-center" href="#">
                     <img id="logo" class="img-fluid shadow" src="assets/white-logo.png" alt="Bootstrap" width="50">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="min-vh-100">
+            <div class="offset min-vh-100">
                 <img src="assets/index_2.png" alt="background" class="img-fluid min-vh-100">
             </div>
         </div>
@@ -65,6 +65,6 @@
 </body>
 
 <!-- <script src="bootstrap.min.js"></script> -->
-<script src="bootstrap.bundle.min.js"></script>
+<script src="./bootstrap/bootstrap.bundle.min.js"></script>
 
 </html>

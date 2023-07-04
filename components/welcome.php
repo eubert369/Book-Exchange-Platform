@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Welcome</title>
         <link rel="icon" href="../assets/white-logo.png">
-        <link rel="stylesheet" href="../bootstrap.min.css">
+        <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -61,7 +61,7 @@
                             <div class="container mt-5">
                                 <div class="row">
                                     <div class="col text-center">
-                                        <a class="btn text-center text-white fw-bold rounded-4 px-5" style="background-color: #CE9461;" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">Continue</a>
+                                        <a class="btn text-center text-white fw-bold rounded-4 px-5" style="background-color: #CE9461;" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">Next</a>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
                             <div class="container mt-5">
                                 <div class="row">
                                     <div class="col text-center">
-                                        <a class="btn text-center text-white fw-bold rounded-4 px-5" style="background-color: #CE9461;" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">Continue</a>
+                                        <a class="btn text-center text-white fw-bold rounded-4 px-5" style="background-color: #CE9461;" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">Next</a>
                                     </div>
                                 </div>
                             </div>
@@ -88,11 +88,72 @@
                     </div>
                     <div class="carousel-item min-vh-100">
                         <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                        <div class="carousel-text w-75 position-absolute top-50 start-50 translate-middle border">
-                            <h1 class="text-center fw-bold fs-1 text-black">Setup your account</h1>
-                            <div class="container-fluid border w-100 ">
+                        <div class="carousel-text w-75 position-absolute top-50 start-50 translate-middle">
+                            <h1 class="text-center fw-bold fs-1 text-black mb-4">Your Interests</h1>
+                            <div class="container-fluid text-center bg-white w-100 p-3" style="height: 50vh; border: 2px solid #CE9461; overflow-y: auto;">
+                                <div class="row justify-content-center">
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Science Fiction
+                                    </button>
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Novel
+                                    </button>
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Fiction
+                                    </button>
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Non-Fiction
+                                    </button>
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Drama
+                                    </button>
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Comedy
+                                    </button>
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Fantasy
+                                    </button>
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Romance
+                                    </button>
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Action
+                                    </button>
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Mystery & Thriller
+                                    </button>
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Classics
+                                    </button>
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Personal Development
+                                    </button>
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Adventure
+                                    </button>
+                                    <button class="col-3 col-md-3 m-3 rounded-4 p-2 fw-bold fs-4" style="height: 130px; border: 2px solid #CE9461;">
+                                        Inspirational
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="container mt-3">
                                 <div class="row">
-                                    
+                                    <div class="col text-center">
+                                        <a class="btn text-center text-white fw-bold rounded-4 px-5" style="background-color: #CE9461;" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">Next</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item min-vh-100">
+                        <div class="carousel-text w-50 position-absolute top-50 start-50 translate-middle">
+                            <h1 class="text-center fw-bold fs-1 text-black mb-5">Well done!</h1>
+                            <p class="text-center text-black fs-3 mb-5">You can now explore and enjoy finding books, join communities, and engage in book swapping events!</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <a class="btn text-center text-white fw-bold rounded-4 px-5" style="background-color: #CE9461;" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">Explore</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -108,14 +169,9 @@
                     <span class="visually-hidden">Next</span>
                 </button> -->
             </div>
-            <!-- <div class="position-absolute top-50 start-50 translate-middle">
-                <h1 class="text-center fw-bold fs-1 text-black mb-5">Welcome!</h1>
-                <p class="text-center text-black fs-3 mb-5">Connect, Exchange and Expand your Literary Universe with our Book Exchange Network</p>
-                <a href="" class="btn text-white fw-bold rounded-4 px-5 position-absolute start-0 start-50 translate-middle-x" style="background-color: #CE9461;">Continue</a>
-            </div> -->
         </div>
     </body>
-    <script src="../bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
     <script>
         function getImage(imagename) {
             var newimg = imagename.replace(/^.*\\/, "");
