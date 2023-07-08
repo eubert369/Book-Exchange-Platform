@@ -13,9 +13,9 @@
 <title>Index</title>
 </head>
 
-<body>
+<body style="overflow-y: hidden;">
     <div class="container-fluid px-0">
-        <nav id="navbar" class="navbar navbar-expand-lg position-absolute w-100 top-0" style="background-color: #DEA057;">
+        <nav id="navbar" class="navbar navbar-expand-lg w-100 fixed-top border-bottom border-black" style="background-color: #DEA057;">
             <div class="container-fluid px-5">
                 <a class="navbar-brand text-center" href="#">
                     <img id="logo" class="img-fluid shadow" src="assets/white-logo.png" alt="Bootstrap" width="50">
@@ -23,7 +23,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse text-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav container-fluid justify-content-end">
                         <a id="home" class="nav-link active text-white mx-3 fs-5" aria-current="page" href="#">Home</a>
                         <li class="nav-item dropdown mx-3">
@@ -37,11 +37,11 @@
                                 <li><a class="dropdown-item" href="#">Joining Communities</a></li>
                             </ul>
                         </li>
-                        <a id="how-to-use" class="nav-link text-white mx-3 fs-5" href="#">How to use</a>
-                        <a id="faqs" class="nav-link text-white mx-3 fs-5" href="#">FAQs</a>
-                        <a id="why-us" class="nav-link text-white mx-3 fs-5" href="#">Why Us?</a>
-                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#">About Us</a>
-                        <a id="about-us" class="nav-link text-white mx-3 fs-5 fw-bold" href="login.php">Login</a>
+                        <a id="how-to-use" class="nav-link text-white mx-3 fs-5" href="#how_to_use">How to use</a>
+                        <a id="faqs" class="nav-link text-white mx-3 fs-5" href="#faq">FAQs</a>
+                        <a id="why-us" class="nav-link text-white mx-3 fs-5" href="#why_us">Why Us?</a>
+                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#about_us">About Us</a>
+                        <a id="about-us" class="nav-link text-white mx-3 fs-5 fw-bold" href="./components/login.php">Login</a>
                     </div>
                 </div>
             </div>
@@ -57,8 +57,26 @@
                     </div>
                 </div>
             </div>
-            <div class="offset min-vh-100">
-                <img src="assets/index_2.png" alt="background" class="img-fluid min-vh-100">
+            <div id="how_to_use" class="offset position-relative min-vh-100">
+                <img src="assets/index_2.png" alt="background" class="img-fluid min-vh-100 w-100">
+                <div class="position-absolute start-50 top-0 translate-middle" style="margin-top: 150px;">
+                    <h1 class="fw-bold fs-1">How to Use</h1>
+                </div>
+            </div>
+            <div id="faq" class="offset position-relative min-vh-100" style="background-color: #E0D8B0;">                
+                <div class="position-absolute start-50 top-0 translate-middle" style="margin-top: 150px;">
+                    <h1 class="fw-bold fs-1">Frequently Asked Questions</h1>
+                </div>
+            </div>
+            <div id="why_us" class="offset position-relative min-vh-100" style="background-color: #DEA057;">                
+                <div class="position-absolute start-50 top-0 translate-middle" style="margin-top: 150px;">
+                    <h1 class="fw-bold fs-1">Why Us?</h1>
+                </div>
+            </div>
+            <div id="about_us" class="offset position-relative min-vh-100 bg-white">                
+                <div class="position-absolute start-50 top-0 translate-middle" style="margin-top: 150px;">
+                    <h1 class="fw-bold fs-1">About Us</h1>
+                </div>
             </div>
         </div>
     </div>
