@@ -73,6 +73,79 @@
                 </div>
             </div>
         </nav>
+        <div class="container-fluid mt-5 offset" style="background-color: #CE9461; height: 35rem;">
+            <div id="carouselExampleCaptions" class="carousel slide p-3" style="height: 35rem;">
+                <div class="carousel-indicators">
+                    <button type="button" style="height: 20px; width: 20px; border-radius: 50%;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" style="height: 20px; width: 20px; border-radius: 50%;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" style="height: 20px; width: 20px; border-radius: 50%;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <h1 class="text-white mt-5">What's HOT</h1>
+                <div class="carousel-inner w-75 mx-auto mt-5">
+                    <div class="carousel-item active border rounded-5 bg-white">                        
+                        <div class="carousel-text">
+                            <div class="container">
+                                <div class="row p-3">
+                                    <img class="col-5 rounded-4" src="../assets/harry-sample.png" alt="sample-image">
+                                    <div class="col">
+                                        <div class="d-flex">
+                                            <h1 class="fw-bold w-75">Harry Potter and The Sorcerer’s Stone</h1>
+                                            <i><img src="../assets/approval.png" alt="approval icon"></i>
+                                        </div>
+                                        <p class="text-black fs-5">Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard—with a place waiting for...</p>
+                                        <div class="d-flex">
+                                            <i><img src="../assets/start-icon.png" alt="star"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item active border rounded-5 bg-white">                        
+                        <div class="carousel-text">
+                            <div class="container">
+                                <div class="row p-3">
+                                    <img class="col-5 rounded-4" src="../assets/harry-sample.png" alt="sample-image">
+                                    <div class="col">
+                                        <div class="d-flex">
+                                            <h1 class="fw-bold w-75">Harry Potter and The Sorcerer’s Stone</h1>
+                                            <i><img src="../assets/approval.png" alt="approval icon"></i>
+                                        </div>
+                                        <p class="text-black fs-5">Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard—with a place waiting for...</p>
+                                        <div class="d-flex">
+                                            <i><img src="../assets/start-icon.png" alt="star"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">                        
+                        <div class="carousel-text ">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="offset"></div>
     </div>
 </body>
 <script src="../bootstrap/bootstrap.bundle.min.js"></script>
