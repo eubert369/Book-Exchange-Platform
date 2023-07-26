@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse text-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav container-fluid justify-content-end">
                         <a id="home" class="nav-link active text-white mx-3 fs-5" aria-current="page" href="#">Home</a>
-                        <a id="how-to-use" class="nav-link text-white mx-3 fs-5" href="#how_to_use">Hints</a>
+                        <a id="how-to-use" class="nav-link text-white mx-3 fs-5" href="components/hints.php">Hints</a>
                         <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#about_us">About Us</a>
                         <a id="about-us" class="nav-link text-white mx-3 fs-5 fw-bold" href="./components/login.php">Login</a>
                     </div>
