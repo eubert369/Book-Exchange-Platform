@@ -1,0 +1,48 @@
+* {
+	font-family: "Inria Sans", sans-serif;
+}
+
+/* #navbar {
+    background-color: #DEA057;
+} */
+#home:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#guidelines:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#how-to-use:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#faqs:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+/* #question:hover {
+    font-weight: bold;
+} */
+
+#why-us:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#about-us:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#join:hover {
+	text-decoration: underline;
+	text-decoration-color: black;
+}
+
+.input_text {
+	border: 1px solid black;
+}
