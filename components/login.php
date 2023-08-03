@@ -7,6 +7,20 @@
     <link rel="icon" href="../assets/white-logo.png">
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <title>Login</title>
+
+
+    <style>
+        #show-password {
+            background-image: url('../assets/icons8_hide_127px 1.png');
+            background-size: 36px 36px;
+            height: 36px;
+            width: 36px;
+        }
+
+        #show-password:active {
+            background-image: url('../assets/icons8_eye_127px 1.png');
+        }
+    </style>
 </head>
 
 <body style="overflow-y: hidden; overflow-x: hidden;">
@@ -27,6 +41,7 @@
                         <div class="form-floating mb-4">
                             <input type="password" class="form-control px-3 rounded-4" name="password" id="password" placeholder="name@example.com" style="border: 2px solid #CE9461;" required>
                             <label class="fw-bold" for="password">Password</label>
+                            <span id="show-password" class="position-absolute me-3 top-50 end-0 translate-middle-y"></span>
                             <?php
                             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 include "./php queries/connection.php";
@@ -64,7 +79,16 @@
             </div>
         </div>
     </div>
+    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('show-password').addEventListener('mousedown', function() {
+            document.querySelector('input[name=password]').setAttribute('type', 'text')
+        })
+
+        document.getElementById('show-password').addEventListener('mouseup', function() {
+            document.querySelector('input[name=password]').setAttribute('type', 'password')
+        })
+    </script>
 </body>
-<script src="../bootstrap/bootstrap.bundle.min.js"></script>
 
 </html>
