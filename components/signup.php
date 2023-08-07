@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/white-logo.png">
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <link rel="icon" href="../assets/bookloopph-website-favicon-white.png">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">    
     <title>Sign Up</title>
 
     <style>
@@ -23,10 +23,10 @@
 </head>
 
 <body style="overflow-y: hidden; overflow-x: hidden;">
-    <form action="./php queries/create.php?signUp=createUser" method="post">
+    <form action="./php-queries/create.php?signUp=createUser" method="post">
         <div class="container-fluid p-0 min-vh-100">
             <a class="btn position-absolute m-3 rounded-pill px-3 fw-bold" href="../index.php" style="background-color: #DEA0575E;">
-                <i class="rounded-circle p-2"><img style="width: 50px;" src="../assets/black-logo.png" alt="logo" /></i>
+                <i class="rounded-circle p-2"><img style="width: 50px;" src="../assets/bookloopph-website-favicon-white.png" alt="logo" /></i>
                 Home
             </a>
             <div class="row ">
@@ -73,14 +73,16 @@
     function explore() {
         var user = document.getElementById('username').value;
         var pass = document.getElementById('password').value;
-        var first = document.getElementById('firstName').value;
-        var last = document.getElementById('lastName').value;
-        var email = document.getElementById('email').value;
+        // form.submit()
+        // var first = document.getElementById('firstName').value;
+        // var last = document.getElementById('lastName').value;
+        // var email = document.getElementById('email').value;
 
         if (user == "" || pass == "") {
             alert("please fill all the inputs");
         } else {
-            window.location.href = "#welcome";
+            // window.location.href = "#welcome";
+            form.submit();
         }
     }
 

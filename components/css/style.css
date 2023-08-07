@@ -2,9 +2,6 @@
 	font-family: "Inria Sans", sans-serif;
 }
 
-/* #navbar {
-    background-color: #DEA057;
-} */
 #home:hover {
 	font-weight: bold;
 	text-decoration: underline;
@@ -24,9 +21,6 @@
 	font-weight: bold;
 	text-decoration: underline;
 }
-/* #question:hover {
-    font-weight: bold;
-} */
 
 #why-us:hover {
 	font-weight: bold;
@@ -45,4 +39,62 @@
 
 .input_text {
 	border: 1px solid black;
+}
+
+/* homepage.php */
+.navbar-brand:hover {
+	background-color: #FAEBD9;
+}
+
+#nav-icons:hover {
+	background-color: #FAEBD9;
+}
+
+#book-club:hover {
+	background-color: #8A6342;
+}
+
+#book-club:hover p {
+	color: #FAEBD9;
+}
+
+#book-trading:hover {
+	background-color: #8A6342;
+}
+
+#book-trading:hover p {
+	color: #FAEBD9;
+}
+
+#my-details:hover {
+	background-color: #8A6342;
+}
+
+#my-details:hover p {
+	color: #FAEBD9;
+}
+
+#to-rate:hover {
+	background-color: #8A6342;
+}
+
+#to-rate:hover p {
+	color: #FAEBD9;
+}
+
+#name:hover {
+	text-decoration: underline;
+}
+
+#create-post:hover {
+	border: 2px solid #8A6342;
+}
+
+.home-anchors {
+	text-decoration: none;
+}
+
+.home-anchors:hover {
+	text-decoration: underline;
+	font-style: italic;
 }

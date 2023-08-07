@@ -1,252 +1,196 @@
-<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="icon" href="../assets/white-logo.png">
+    <title>BookLoopPH | Home</title>
+    <link rel="icon" href="../assets/bookloopph-website-favicon-white.png">
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
 </head>
+<style>
+    .navbar-brand:hover {
+        background-color: #FAEBD9;
+    }
+
+    #nav-icons:hover {
+        background-color: #FAEBD9;
+    }
+
+    #book-club:hover {
+        background-color: #8A6342;
+    }
+
+    #book-club:hover p {
+        color: #FAEBD9;
+    }
+
+    #book-trading:hover {
+        background-color: #8A6342;
+    }
+
+    #book-trading:hover p {
+        color: #FAEBD9;
+    }
+
+    #my-details:hover {
+        background-color: #8A6342;
+    }
+
+    #my-details:hover p {
+        color: #FAEBD9;
+    }
+
+    #to-rate:hover {
+        background-color: #8A6342;
+    }
+
+    #to-rate:hover p {
+        color: #FAEBD9;
+    }
+
+    #name:hover {
+        text-decoration: underline;
+    }
+
+    #create-post:hover {
+        border: 2px solid #8A6342;
+    }
+
+    .home-anchors {
+        text-decoration: none;
+    }
+
+    .home-anchors:hover {
+        text-decoration: underline;
+        font-style: italic;
+    }
+</style>
 
 <body>
     <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-light border-bottom fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><i><img class="shadow" src="../assets/black-logo.png" alt="logo" width="50"></i></a>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary" type="submit">Search</button>
-                </form>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="container-fluid text-center">
-                        <div class="row justify-content-center">
-                            <div class="col">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 row justify-content-center">
-                                    <li class="nav-item col-3 col-md-1">
-                                        <a class="nav-link active" aria-current="page" href="#"><i><img src="../assets/home.png" alt="home" class="img-fluid"></i></a>
-                                    </li>
-                                    <li class="nav-item col-3 col-md-1 dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i><img src="../assets/books.png" alt="home" class="img-fluid"></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Books for Swapping</a></li>
-                                            <hr class="dropdown-divider">
-                                            <li><a class="dropdown-item" href="#">Books for Rent</a></li>
-                                            <hr class="dropdown-divider">
-                                            <li><a class="dropdown-item" href="#">Books for Sale</a></li>
-                                            <hr class="dropdown-divider">
-                                            <li><a class="dropdown-item" href="#">Sell Book</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item col-3 col-md-1">
-                                        <a class="nav-link" href="#"><i><img src="../assets/leaderboard.png" alt="home" class="img-fluid"></i></a>
-                                    </li>
-                                    <li class="nav-item col-3 col-md-1">
-                                        <a class="nav-link" href="#"><i><img src="../assets/communities.png" alt="home" class="img-fluid"></i></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <div class="col-3">
-                                <ul class="navbar-nav row h-100 justify-content-center">
-                                    <li class="col nav-item">
-                                        <a class="nav-link" href="#"><i><img src="../assets/plus-icon.png" alt="home" class="img-fluid"></i></a>
-                                    </li>
-                                    <li class="col nav-item">
-                                        <a class="nav-link" href="#"><i><img src="../assets/chats.png" alt="home" class="img-fluid"></i></a>
-                                    </li>
-                                    <li class="col nav-item">
-                                        <a class="nav-link" href="#"><i><img src="../assets/notif.png" alt="home" class="img-fluid"></i></a>
-                                    </li>
-                                    <li class="col nav-item">
-                                        <a class="nav-link" href="#"><i><img src="../assets/accounts.png" alt="home" class="img-fluid"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
+        <!-- NAV -->
+        <nav id="navbar" class="navbar navbar-expand-lg w-100 shadow fixed-top" style="border-bottom: 2px solid #CE9461; background-color: #FFF;">
+            <div class="container-fluid px-5">
+                <div class="row w-100">
+                    <a class="col-1 navbar-brand rounded-circle text-center" href="#">
+                        <img id="logo" class="img-fluid" src="../assets/bookloopph-website-favicon-white.png" alt="Bootstrap" width="60">
+                    </a>
+                    <div class="col-lg-7 col-9 d-flex px-2 justify-content-end">
+                        <input class="form-control search-input w-50 me-2" type="search" placeholder="Search" aria-label="Search" style="background-color: #FAEBD9;">
+                    </div>
+                    <button class="col-1 ms-5 justify-content-end navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="col-3 col-lg-1 collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                        <div class="navbar-nav px-2">
+                            <a id="nav-icons" class="nav-link rounded-4 px-3 d-flex justify-content-end" href="#"><img src="../assets/home.png" alt="home" width="35"></a>
+                            <a id="nav-icons" class="nav-link rounded-4 px-3 d-flex justify-content-end" href="#"><img src="../assets/shopping-cart.png" alt="shopping" width="35"></a>
+                            <a id="nav-icons" class="nav-link rounded-4 px-3 d-flex justify-content-end" href="#"><img src="../assets/message.png" alt="messaging" width="35"></a>
+                            <a id="nav-icons" class="nav-link rounded-4 px-3 d-flex justify-content-end" href="#"><img src="../assets/notif.png" alt="notification" width="35"></a>
+                            <a id="nav-icons" class="nav-link rounded-4 ps-3 d-flex justify-content-end" href="#"><img src="../assets/profile.png" alt="profile" width="35"></a>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-        <div class="container-fluid mt-5 offset" style="background-color: #CE9461; height: 35rem;">
-            <div id="carouselExampleCaptions" class="carousel slide p-3" style="height: 35rem;">
-                <div class="carousel-indicators">
-                    <button type="button" style="height: 20px; width: 20px; border-radius: 50%;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" style="height: 20px; width: 20px; border-radius: 50%;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" style="height: 20px; width: 20px; border-radius: 50%;" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+        <!-- HERO -->
+        <div class="offset container-fluid" style="margin-top: 7em;">
+            <div class="row">
+                <!-- SIDEBAR -->
+                <div id="sidebar" class="col-3 d-flex flex-column">
+                    <a id="book-club" href="#" class="btn py-3 shadow-sm mx-auto fw-bold d-flex justify-content-start flex-items-center w-75 border-bottom border-2" style="color: #8A6342;"><i class="me-2"><img src="../assets/bookclub.png" alt="bookclub-icon" width="80"></i>
+                        <p class="my-auto">Book Club</p>
+                    </a>
+                    <a id="book-trading" href="#" class="btn py-3 shadow-sm mx-auto fw-bold d-flex justify-content-start flex-items-center w-75 border-bottom border-2" style="color: #8A6342;"><i class="me-2"><img src="../assets/booktrading.png" alt="book-trading-icon" width="80"></i>
+                        <p class="my-auto">Book Trading</p>
+                    </a>
+                    <a id="my-details" href="#" class="btn py-3 shadow-sm mx-auto fw-bold d-flex justify-content-start flex-items-center w-75 border-bottom border-2" style="color: #8A6342;"><i class="me-2"><img src="../assets/myDetails.png" alt="my-details-icon" width="80"></i>
+                        <p class="my-auto">My Details</p>
+                    </a>
+                    <a id="to-rate" href="#" class="btn py-3 shadow-sm mx-auto fw-bold d-flex justify-content-start flex-items-center w-75 border-bottom border-2" style="color: #8A6342;"><i class="me-2"><img src="../assets/toRate.png" alt="to-rate-icon" width="80"></i>
+                        <p class="my-auto">To Rate</p>
+                    </a>
                 </div>
-                <h1 class="text-white mt-5">What's HOT</h1>
-                <div class="carousel-inner w-75 mx-auto mt-5">
-                    <div class="carousel-item active border rounded-5 bg-white">                        
-                        <div class="carousel-text">
-                            <div class="container">
-                                <div class="row p-3">
-                                    <img class="col-5 rounded-4" src="../assets/harry-sample.png" alt="sample-image">
-                                    <div class="col">
-                                        <div class="d-flex">
-                                            <h1 class="fw-bold w-75">Harry Potter and The Sorcerer’s Stone</h1>
-                                            <i><img src="../assets/approval.png" alt="approval icon"></i>
-                                        </div>
-                                        <p class="text-black fs-5">Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard—with a place waiting for...</p>
-                                        <div class="d-flex">
-                                            <i><img src="../assets/start-icon.png" alt="star"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star"></i>
+                <div class="col mx-5 px-5">
+                    <div class="container px-5 shadow">
+                        <div class="row border-bottom rounded-top p-4">
+                            <img class="col-2" src="../assets/profile.png" alt="profile">
+                            <div class="col" style="color: #8A6342;">
+                                <h4 id="name" class="fw-bold">Nestine Nicole Navarro</h4>
+                                <p>
+                                    2.9K Followers . 500 Following <br>
+                                    Lives in Tacloban City
+                                </p>
+                            </div>
+                            <div class="col-1">
+                                <button class="btn" id="create-post" href="#"><img src="../assets/writing-square.png" alt="edit-profile" width="40"></button>
+                            </div>
+                            <div class="container-fluid mt-3">
+                                <div class="row">
+                                    <div class="col-5 px-4 py-2 rounded rounded-4" style="background-color: #FAEBD9; color: #8A6342;">
+                                        <h4 class="fw-medium">Interests</h4>
+                                        <p>Crime & Thriller, Mystery & Suspense and <a class="text-decoration-none fw-bold" href="#" style="color: #8A6342;">2 more</a></p>
+                                    </div>
+                                    <div class="col ms-4 p-0">
+                                        <div class="container-fluid p-0 h-100">
+                                            <div class="row p-0 h-100 align-items-end" style="color: #8A6342;">
+                                                <div class="col mx-1 text-center p-0">
+                                                    <i class="p-3 rounded-circle position-relative" style="background-color: #EEE;">
+                                                        <img class="opacity-50" src="../assets/books-exchanged.png" alt="books-exchanged" width="25">
+                                                        <p class="position-absolute top-50 start-50 translate-middle fw-bold" style="font-size: 13px;">99</p>
+                                                    </i>
+                                                    <p class="mt-4 mb-0" style="font-size: 10px;">Books<br>Exchanged</p>
+                                                </div>
+                                                <div class="col mx-1 text-center p-0">
+                                                    <i class="p-3 rounded-circle position-relative" style="background-color: #EEE;">
+                                                        <img class="opacity-50" src="../assets/books-rented.png" alt="books-rented" width="25">
+                                                        <p class="position-absolute top-50 start-50 translate-middle fw-bold" style="font-size: 13px;">99</p>
+                                                    </i>
+                                                    <p class="mt-4 mb-0" style="font-size: 10px;">Books<br>Rented</p>
+                                                </div>
+                                                <div class="col mx-1 text-center p-0">
+                                                    <i class=" p-3 rounded-circle position-relative" style="background-color: #EEE;">
+                                                        <img class="opacity-50" src="../assets/books-lent.png" alt="books-lent" width="25">
+                                                        <p class="position-absolute top-50 start-50 translate-middle fw-bold" style="font-size: 13px;">99</p>
+                                                    </i>
+                                                    <p class="mt-4 mb-0" style="font-size: 10px;">Books<br>Lent</p>
+                                                </div>
+                                                <div class="col mx-1 text-center p-0">
+                                                    <i class=" p-3 rounded-circle position-relative" style="background-color: #EEE;">
+                                                        <img class="opacity-50" src="../assets/books-sold.png" alt="books-sold" width="25">
+                                                        <p class="position-absolute top-50 start-50 translate-middle fw-bold" style="font-size: 13px;">99</p>
+                                                    </i>
+                                                    <p class="mt-4 mb-0" style="font-size: 10px;">Books<br>Sold</p>
+                                                </div>
+                                                <div class="col mx-1 text-center p-0">
+                                                    <i class=" p-3 rounded-circle position-relative" style="background-color: #EEE;">
+                                                        <img class="opacity-50" src="../assets/books-bought.png" alt="books-bought" width="25">
+                                                        <p class="position-absolute top-50 start-50 translate-middle fw-bold" style="font-size: 13px;">99</p>
+                                                    </i>
+                                                    <p class="mt-4 mb-0" style="font-size: 10px;">Books<br>Bought</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item active border rounded-5 bg-white">                        
-                        <div class="carousel-text">
-                            <div class="container">
-                                <div class="row p-3">
-                                    <img class="col-5 rounded-4" src="../assets/harry-sample.png" alt="sample-image">
-                                    <div class="col">
-                                        <div class="d-flex">
-                                            <h1 class="fw-bold w-75">Harry Potter and The Sorcerer’s Stone</h1>
-                                            <i><img src="../assets/approval.png" alt="approval icon"></i>
-                                        </div>
-                                        <p class="text-black fs-5">Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard—with a place waiting for...</p>
-                                        <div class="d-flex">
-                                            <i><img src="../assets/start-icon.png" alt="star"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">                        
-                        <div class="carousel-text ">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                        <div class="row py-3 fw-bold px-5 text-center border-bottom rounded-bottom">
+                            <a id="posts" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Posts</a>
+                            <a id="liked" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Liked</a>
+                            <a id="reviews" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Reviews</a>
+                            <a id="wish-list" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Wish List</a>
+                            <a id="bookshelf" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Bookshelf</a>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
-        <div class="offset"></div>
     </div>
 </body>
-<script src="../bootstrap/bootstrap.bundle.min.js"></script>
-
-</html>
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="icon" href="assets/white-logo.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <title>Home Page</title>
-</head>
-
-<body>
-    <div class="container-fluid px-0">
-        <nav id="navbar" class="navbar navbar-expand-lg position-absolute w-100 top-0">
-            <div class="container-fluid px-5">
-                <a class="navbar-brand text-center" href="#">
-                    <img id="logo" class="img-fluid shadow" src="assets/white-logo.png" alt="Bootstrap" width="50">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav container-fluid justify-content-end">
-                        <a id="home" class="nav-link active text-white mx-3 fs-5" aria-current="page" href="#"><img class="img" src="assets/home-icon.png" alt="home" width="30"></a>
-                        <a id="how-to-use" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/book-barter.png" alt="barter" width="30"></a>
-                        <a id="faqs" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/lending-hub.png" alt="lending hub" width="30"></a>
-                        <a id="why-us" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/sale-icon.png" alt="lending hub" width="30"></a>
-                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/friends.png" alt="lending hub" width="30"></a>
-                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/book-club.png" alt="lending hub" width="30"></a>
-                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/location.png" alt="lending hub" width="30"></a>
-                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/messaging.png" alt="lending hub" width="30"></a>
-                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="#"><img class="img" src="assets/notif-icon.png" alt="lending hub" width="30"></a>
-                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="login.php"><img class="img" src="assets/profile.png" alt="lending hub" width="30"></a>
-                        <input class="form-control w-25 rounded-pill" type="search" placeholder="Search" aria-label="Search">
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="container text-center border">
-            <div class="row position-absolute top-50 start-50 translate-middle">                
-                    <div class="col-3 border m-3 p-3 rounded-4" style="background-color: #E0D8B0;">
-                        <h1>Book Sold</h1>
-                    </div>
-                    <div class="col-3 border m-3 p-3 rounded-4" style="background-color: #E0D8B0;">
-                        <h1>Book Bought</h1>
-                    </div>
-                    <div class="col-3 border m-3 p-3 rounded-4" style="background-color: #E0D8B0;">
-                        <h1>Book Loaned</h1>
-                    </div>
-                    <div class="col-3 border m-3 p-3 rounded-4" style="background-color: #E0D8B0;">
-                        <h1>Book Lent</h1>
-                    </div>
-                    <div class="col-3 border m-3 p-3 rounded-4" style="background-color: #E0D8B0;">
-                        <h1>Book Bartered</h1>
-                    </div>
-                    <div class="col-3 border m-3 p-3 rounded-4" style="background-color: #E0D8B0;">
-                        <h1>Book Shared</h1>
-                    </div>                
-            </div>
-        </div>
-    </div> -->
-
-<?php
-
-// $query = "SELECT post_title, post_des FROM posttable";
-
-// $result = $conn->query($query);
-
-// if ($result) {
-//     $rows = $result->fetch_all(MYSQLI_ASSOC);
-?>
-
-<!-- <div id="postOuterCtn">
-        <?php
-        // array_map(function ($row) {
-        //     echo "<div id='postInnerCtn'>";
-        //     echo "<p>Title: {$row['post_title']}</p>";
-        //     echo "<p>Description: {$row['post_des']}</p>";
-        //     echo "</div>";
-        // }, $rows);
-        ?>
-    </div> -->
-
-<?php
-//     $result->free_result();
-// } else {
-//     echo "Error executing the query: " . $connection->error;
-// }
-
-?>
-<script src="bootstrap.bundle.min.js"></script>
-
-<script src="app.js"></script>
-</body>
+<script src="..//bootstrap/bootstrap.bundle.min.js"></script>
 
 </html>

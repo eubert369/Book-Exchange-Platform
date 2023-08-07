@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/white-logo.png">
+    <link rel="icon" href="../assets/bookloopph-website-favicon-white.png">
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <title>Login</title>
 
@@ -26,7 +26,7 @@
 <body style="overflow-y: hidden; overflow-x: hidden;">
     <div class="container-fluid p-0 min-vh-100">
         <div class="position-absolute w-100 text-end m-2">
-            <a class="btn m-3 rounded-pill px-3 fw-bold" href="../index.php" style="background-color: #DEA0575E;">Home <i class="rounded-circle p-2"><img style="width: 50px;" src="../assets/black-logo.png" alt="logo"></i></a>
+            <a class="btn m-3 rounded-pill px-3 fw-bold" href="../index.php" style="background-color: #DEA0575E;">Home <i class="rounded-circle p-2"><img style="width: 50px;" src="../assets/bookloopph-website-favicon-white.png" alt="logo"></i></a>
         </div>
         <div class="row p-0">
             <div class="col-6 p-0 position-relative d-flex justify-content-center" style="background-color: #E0D8B0;">
@@ -44,7 +44,7 @@
                             <span id="show-password" class="position-absolute me-3 top-50 end-0 translate-middle-y"></span>
                             <?php
                             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                include "./php queries/connection.php";
+                                include "./php-queries/connection.php";
                                 $username = $_REQUEST['username'];
                                 $password = $_REQUEST['password'];
 

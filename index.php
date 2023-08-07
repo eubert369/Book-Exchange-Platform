@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/white-logo.png">
+    <link rel="icon" href="./assets/bookloopph-website-favicon-white.png">
     <link rel="stylesheet" href="./components/css/style.css">
     <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
 
 </head>
-<title>Index</title>
+<title>BookLoopPH</title>
 </head>
 
 <body>
@@ -56,7 +56,7 @@
                             buy, sell, exchange, and rent your used books<br>
                             with fellow book enthusiasts
                         </p>
-                        <a id="join" href="./components/welcome.php" class="btn rounded-pill fs-4 fw-bold bg-light position-absolute start-0 start-50 translate-middle-x w-25 p-1 mt-2">Join</a>
+                        <a id="join" href="./components/signup.php" class="btn rounded-pill fs-4 fw-bold bg-light position-absolute start-0 start-50 translate-middle-x w-25 p-1 mt-2">Join</a>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@
                     <p class="fs-3">
                         BookLoopPh is your ultimate destination for connecting book lovers and facilitating the exchange of knowledge. Whether you’re seeking a captivating novel, a rare gem, or looking to declutter your bookshelf, BookLoopPH offers a seamless platform to connect, share, and explore literary treasures.
                     </p>
-                    <a href="./components/welcome.php" class="btn text-decoration-none text-light rounded-pill fs-4 fw-bold w-25 p-1 mt-2" style="background-color: #8A6342;">
+                    <a href="./components/signup.php" class="btn text-decoration-none text-light rounded-pill fs-4 fw-bold w-25 p-1 mt-2" style="background-color: #8A6342;">
                         Explore more
                     </a>
                 </div>
