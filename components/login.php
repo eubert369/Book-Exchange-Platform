@@ -56,7 +56,11 @@
                                     if ($row) {
                                         if ($row["Username"] == $username && $row["Password"] == $password) {
                                             $conn->close();
+                                            session_start();
+                                            $_SESSION["Username"] = $_REQUEST['username'];
+                                            $_SESSION["Password"] = $_REQUEST['password'];
                                             header("Location: homepage.php");
+                                            exit();
                                         }
                                     } else {
                                         echo '<p class="text-danger text-center mt-2 fw-bold">Invalid username or password</p>';

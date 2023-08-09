@@ -42,7 +42,7 @@
                             </div>
                         </div>
                     </div>
-                    <form id="form" action="./php-queries/create.php?userData=user" method="post">
+                    <form id="form" action="./php-queries/create.php?userData=user" method="post" enctype="multipart/form-data">
                         <div class="carousel-item min-vh-100">
                             <div class="carousel-text px-3 w-75 position-absolute top-50 start-50 translate-middle">
                                 <div class="container-fluid">
@@ -104,7 +104,7 @@
                                 <h1 class="text-center fw-bold fs-1 text-black">Setup your account</h1>
                                 <div class="custom-file text-center mt-5">
                                     <label class="custom-file-label rounded-circle border" for="imageUpload" style="background-color: #D9D9D9; cursor: pointer; width: 150px;"><i><img class="w-100 rounded-circle p-2" src="../assets/image.png" id="img-icon" alt="image icon"></i></label>
-                                    <input type="file" class="d-none custom-file-input" id="imageUpload" name="imageUpload" accept="image/gif, image/jpeg, image/png" onchange="getImage(event);">
+                                    <input type="file" class="d-none custom-file-input" id="imageUpload" name="imageUpload" accept="image/*" onchange="getImage(event);">
                                     <p class="fs-4 mt-2">Add Your Photo</p>
                                 </div>
                                 <div class="container mt-5">
