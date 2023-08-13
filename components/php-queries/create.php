@@ -9,11 +9,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else if (!empty($_REQUEST["userData"])) {
         // echo "userData have worked";
         updateUser();
+    } else if (!empty($_REQUEST["postSale"])) {
+        createPostSale();
     } else {
         echo "error bitch";
     }
-}
-
+} 
 
 function createUser()
 {
@@ -26,8 +27,6 @@ function createUser()
     $username = $_SESSION["username"];
     $password = $_SESSION["password"];
 
-    // echo $username . " " . $password;
-
     try {
         $sql = "INSERT INTO `users`(`Username`, `Password`) VALUES ('$username', '$password')"; // implode() to convert array to string with separator
         $conn->query($sql);
@@ -37,27 +36,6 @@ function createUser()
     } catch (\Throwable $th) {
         echo $th;
     }
-
-    // $firstName = $_REQUEST["firstName"];
-    // $lastName = $_REQUEST["lastName"];
-    // $email = $_REQUEST["email"];
-    // $profile = $_REQUEST["imageUpload"]
-    // $interest = $_REQUEST["interests"];
-    // $arrayOfInterests = array_values($interest);
-
-    // if (empty($username) && empty($password) || empty($firstName) || empty($lastName) || empty($email) || sizeof($interest) == 0) {
-    //     header("Location: ../signup.php");
-    // } else {
-    //     // echo $username." ".$password." ".$firstName." ".$lastName." ".$email." ".$profile." ".$arrayOfInterests;
-    //     try {
-    //         $sql = "INSERT INTO users(Username, Password, FirstName, LastName, Email, ProfilePhoto, Interests) VALUES ('$username', '$password', '$firstName', '$lastName', '$email', '$profile', '$arrayOfInterests')"; // implode() to convert array to string with separator
-    //         $conn->query($sql);
-    //         $conn->close();
-    //         header("Location: ../homepage.php");
-    //     } catch (\Throwable $th) {
-    //         echo $th;
-    //     }
-    // }
 }
 
 function updateUser()
@@ -83,34 +61,46 @@ function updateUser()
 
         // image
         $img_name = $_FILES['imageUpload']['name'];
-        $img_data = addslashes(file_get_contents($_FILES["imageUpload"]["tmp_name"]));
-        // $img_tmp_name = $_FILES['imageUpload']['tmp_name'];
-        // $upload_folder = "images/";
-        // echo $img_name  . " " .  $img_tmp_name . " " .  $upload_folder . " " . $img_data;
-        // $moveFile = move_uploaded_file($img_tmp_name, $upload_folder . $img_name);
-        // if ($moveFile) {
-        //     echo "bitch worked";
-        // } else {
-        //     echo "buysit";
-        // }
-        // echo $profileImage . " " .  $imageName  . " " .  $imageTmpName . " " .  $destination;
-        // $openImage = fopen($profileImage, 'r+');
+        $img_data = addslashes(file_get_contents($_FILES["imageUpload"]["tmp_name"]));    
 
-        // echo $username . " and " . $password . " with " . $firstName . " " . $lastName . " " . $email . " " . $phone . " " . $address . " " . $gender . " " . $birthday . " " . $age . " " . $profileImage . " " . $arrayOfInterests;
-
-        try {
-            // move_uploaded_file($imageTmpName, $destination . basename($imageName));
+        try {            
             $sql = "UPDATE `users` SET `FirstName`='$firstName',`LastName`='$lastName',`Email`='$email',`PhoneNumber`='$phone',`Address`='$address',`Gender`='$gender',`Birthday`='$birthday',`Age`='$age',`ProfilePhoto`='$img_data',`Interests`='$serializedInterest' WHERE Username = '$username' && Password = '$password'";
             $result = $conn->query($sql);
             if ($result) {
                 $conn->close();
                 // echo "try to check if the bitch worked";
-                header("Location: ../login.php");
+                header("Location: ../homepage.php");
             } else {
-                echo "bitch";
+                echo "file error;";
             }
-        } catch (\Throwable $th) {
+        } catch (\Exception $th) {
             echo $th;
         }
     }
+}
+
+// create post for sale
+function createPostSale() {
+    include "./connection.php";
+
+    $book_image = $_FILES["imageSale"]["name"];
+    $book_img_data = addslashes(file_get_contents($_FILES["imageSale"]["tmp_name"]));
+
+    $title = $_REQUEST["title"];
+    $author = $_REQUEST["author"];
+    $genre = $_REQUEST["genre"];
+    $condition = $_REQUEST["condition"];
+    $price = $_REQUEST["price"];
+    $edition =$_REQUEST["edition"];
+    $language = $_REQUEST["language"];
+
+    try {
+        $sql = "INSERT INTO `book_sale_post`(`title`, `author`, `genre`, `condition`, `price`, `edition`, `language`, `book_photo`) VALUES ('$title','$author','$genre','$condition','$price','$edition','$language','$book_img_data')";
+        $conn->query($sql);
+        $conn->close();
+        header("Location: ../homepage.php");
+    } catch (\Exception $th) {
+        echo $th;
+    }
+    
 }

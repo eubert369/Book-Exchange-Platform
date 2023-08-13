@@ -30,7 +30,7 @@
         </div>
         <div class="row p-0">
             <div class="col-6 p-0 position-relative d-flex justify-content-center" style="background-color: #E0D8B0;">
-                <div class="mx-5 w-75 position-absolute" style="top: 25%;">
+                <div class="mx-5 w-75 position-absolute" style="top: 20%;">
                     <h1 class="fw-bold mb-3">Log In</h1>
                     <!-- <form action="./php queries/read.php?login=shit" method="post"> -->
                     <form action="login.php" method="post">
