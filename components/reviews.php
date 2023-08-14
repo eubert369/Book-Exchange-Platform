@@ -94,7 +94,7 @@ try {
                     font-style: italic;
                 }
 
-                #posts {
+                #reviews {
                     border-bottom: 2px solid #8A6342;
                 }
 
@@ -237,9 +237,9 @@ try {
                                         </div>
                                     </div>
                                     <div class="row py-3 fw-bold px-5 text-center border-bottom rounded-bottom">
-                                        <a id="posts" class="col m-0 home-anchors" href="./homepage.php" style="color: #8A6342;">Posts</a>
+                                        <a id="posts" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Posts</a>
                                         <a id="liked" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Liked</a>
-                                        <a id="reviews" class="col m-0 home-anchors" href="./reviews.php" style="color: #8A6342;">Reviews</a>
+                                        <a id="reviews" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Reviews</a>
                                         <a id="wish-list" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Wish List</a>
                                         <a id="bookshelf" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Bookshelf</a>
                                     </div>
@@ -247,196 +247,8 @@ try {
 
                                 <!-- POST CONTENTS -->
                                 <div class="container">
-                                    <!-- FOR SALE -->
-                                    <?php
-                                    // $saleRows = $result_query_sale->num_rows;
-                                    while ($postRowSale = $result_query_sale->fetch_assoc()) {
-                                        echo '<div class="row border mt-4 px-4 py-3 shadow rounded rounded-3" style="color: #8A6342;">
-                                    <div class="col p-0 d-flex justify-content-start">
-                                        <img class="img-fluid rounded-circle" src="data:image/jpeg;base64,' . base64_encode($postRowSale["ProfilePhoto"]) . '" alt="profile" width="70">
-                                        <p class="fw-bold fs-4 ms-3 my-auto">' . $postRowSale["FirstName"] . ' ' . $postRowSale["LastName"] . '</p>
-                                    </div>
-                                    <div class="col-1">
-                                        <div class="mt-3 d-flex justify-content-end dropdown p-0">
-                                            <a class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <img src="../assets/dot-menu.png" alt="menu">
-                                            </a>
-                                            <ul class="dropdown-menu" style="background-color: #EAEAEA;">
-                                                <li><a class="dropdown-item" href="#">Report</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="container-fluid mt-3">
-                                        <div class="row border-bottom pb-4">
-                                            <div class="col">
-                                                <p class="ms-5 mb-1"><b class="pe-2">Title: </b>' . $postRowSale["sale_title"] . '</p>
-                                                <p class="ms-5 mb-1"><b class="pe-2">Author: </b>' . $postRowSale["sale_author"] . '</p>
-                                                <p class="ms-5 mb-1"><b class="pe-2">Edition: </b>' . $postRowSale["sale_edition"] . '</p>
-                                                <p class="ms-5 mb-1"><b class="pe-2">Language: </b>' . $postRowSale["sale_language"] . '</p>
-                                                <p class="ms-5 mb-1"><b class="pe-2">Genre: </b>' . $postRowSale["sale_genre"] . '</p>
-                                                <p class="ms-5 mb-1"><b class="pe-2">Condition: </b>' . $postRowSale["sale_condition"] . '</p>
-                                            </div>
-                                            <div class="col me-5">
-                                                <div class="card" style="width: 18rem;">
-                                                    <img src="data:image/jpeg;base64,' . base64_encode($postRowSale["sale_book_photo"]) . '" class="card-img-top" alt="...">
-                                                    <div class="card-body container-fluid pb-1 pt-1" style="border: 1px solid #8A6342; color: #8A6342; background-color: #EEEBEB;">
-                                                        <div class="row p-0">
-                                                            <p class="col card-text fw-bold mb-0 px-1">FOR SALE</p>
-                                                            <p class="col card-text fw-bold mb-0 px-1 text-end">' . $postRowSale["sale_price"] . '</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-2 px-2">
-                                            <div id="post-button" class="col btn d-flex justify-content-center">
-                                                <img src="../assets/like-icon.png" alt="like-icon" class="img" width="30">
-                                                <p class="my-auto ms-2 fw-bold">Like</p>
-                                            </div>
-                                            <div id="post-button" class="col btn d-flex justify-content-center">
-                                                <img src="../assets/add-to-cart-icon.png" alt="cart-icon" class="img" width="30">
-                                                <p class="my-auto ms-2 fw-bold">Add to Cart</p>
-                                            </div>
-                                            <div id="post-button" class="col btn d-flex justify-content-center">
-                                                <img src="../assets/add-to-wishlist-icon.png" alt="wish-icon" class="img" width="30">
-                                                <p class="my-auto ms-2 fw-bold">Add to Wish List</p>
-                                            </div>
-                                            <div id="post-button" class="col btn d-flex justify-content-center">
-                                                <img src="../assets/message-seller-icon.png" alt="chat-icon" class="img" width="30">
-                                                <p class="my-auto ms-2 fw-bold">Message Seller</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>';
-                                        $saleRows--;
-                                    }
-                                    // For Exchange
-                                    while ($postRowExchange = $result_query_exchange->fetch_assoc()) {
-                                        echo '<div class="row border mt-4 px-4 py-3 shadow rounded rounded-3" style="color: #8A6342;">
-                                        <div class="col p-0 d-flex justify-content-start">
-                                            <img class="img-fluid rounded-circle" src="data:image/jpeg;base64,' . base64_encode($postRowExchange["ProfilePhoto"]) . '" alt="profile" width="70">
-                                            <p class="fw-bold fs-4 ms-3 my-auto">' . $postRowExchange["FirstName"] . ' ' . $postRowExchange["LastName"] .'</p>
-                                        </div>
-                                        <div class="col-1">
-                                            <div class="mt-3 d-flex justify-content-end dropdown p-0">
-                                                <a class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <img src="../assets/dot-menu.png" alt="menu">
-                                                </a>
-                                                <ul class="dropdown-menu" style="background-color: #EAEAEA;">
-                                                    <li><a class="dropdown-item" href="#">Report</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="container-fluid mt-3">
-                                            <div class="row border-bottom pb-4">
-                                                <div class="col">
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Title: </b>' . $postRowExchange["exchange_title"] . '</p>
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Author: </b>' . $postRowExchange["exchange_author"] . '</p>
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Edition: </b>' . $postRowExchange["exchange_edition"] . '</p>
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Language: </b>' . $postRowExchange["exchange_language"] . '</p>
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Genre: </b>' . $postRowExchange["exchange_genre"] . '</p>
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Condition: </b>' . $postRowExchange["exchange_condition"] . '</p>
-                                                    <p class="ms-5 mb-1" style="text-align: justify;"><b>Exchange Preferences: </b>
-                                                        <br> &emsp;' . $postRowExchange["exchange_preferences"] . '
-                                                    </p>
-                                                </div>
-                                                <div class="col me-5">
-                                                    <div class="card" style="width: 18rem;">
-                                                        <img src="data:image/jpeg;base64,' . base64_encode($postRowExchange["exchange_book_photo"]) . '" class="card-img-top" alt="...">
-                                                        <div class="card-body container-fluid pb-1 pt-1" style="border: 1px solid #8A6342; color: #8A6342; background-color: #EEEBEB;">
-                                                            <p class="col card-text fw-bold mb-0 px-1">FOR EXCHANGE</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mt-2 px-2">
-                                                <div id="post-button" class="col btn d-flex justify-content-center">
-                                                    <img src="../assets/like-icon.png" alt="like-icon" class="img" width="30">
-                                                    <p class="my-auto ms-2 fw-bold">Like</p>
-                                                </div>
-                                                <div id="post-button" class="col btn d-flex justify-content-center">
-                                                    <img src="../assets/add-to-cart-icon.png" alt="cart-icon" class="img" width="30">
-                                                    <p class="my-auto ms-2 fw-bold">Add to Cart</p>
-                                                </div>
-                                                <div id="post-button" class="col btn d-flex justify-content-center">
-                                                    <img src="../assets/add-to-wishlist-icon.png" alt="wish-icon" class="img" width="30">
-                                                    <p class="my-auto ms-2 fw-bold">Add to Wish List</p>
-                                                </div>
-                                                <div id="post-button" class="col btn d-flex justify-content-center">
-                                                    <img src="../assets/message-seller-icon.png" alt="chat-icon" class="img" width="30">
-                                                    <p class="my-auto ms-2 fw-bold">Message Seller</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>';
-                                    }
-
-                                    // For Rent
-                                    while ($postRowRent = $result_query_rent->fetch_assoc()) {
-                                        echo '<div class="row border mt-4 px-4 py-3 shadow rounded rounded-3" style="color: #8A6342;">
-                                        <div class="col p-0 d-flex justify-content-start">
-                                            <img class="img-fluid" src="data:image/jpeg;base64,' . base64_encode($postRowExchange["ProfilePhoto"]) . '" alt="profile" width="70">
-                                            <p class="fw-bold fs-4 ms-3 my-auto">' . $postRowRent["FirstName"] . ' ' . $postRowRent["LastName"] . '</p>
-                                        </div>
-                                        <div class="col-1">
-                                            <div class="mt-3 d-flex justify-content-end dropdown p-0">
-                                                <a class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <img src="../assets/dot-menu.png" alt="menu">
-                                                </a>
-                                                <ul class="dropdown-menu" style="background-color: #EAEAEA;">
-                                                    <li><a class="dropdown-item" href="#">Report</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="container-fluid mt-3">
-                                            <div class="row border-bottom pb-4">
-                                                <div class="col">
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Title: </b>' . $postRowRent["rent_title"] . '</p>
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Author: </b>' . $postRowRent["rent_author"] . '</p>
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Edition: </b>' . $postRowRent["rent_edition"] . '</p>
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Language: </b>' . $postRowRent["rent_language"] . '</p>
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Genre: </b>' . $postRowRent["rent_genre"] . '</p>
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Condition: </b>' . $postRowRent["rent_condition"] . '</p>
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Rental Duration: </b>' . $postRowRent["rental_duration"] . '</p>
-                                                    <p class="ms-5 mb-1"><b class="pe-2">Security Deposit: </b>' . $postRowRent["security_deposit"] . '</p>
-                                                    <p class="ms-5 mb-1" style="text-align: justify;"><b>Rental Terms & Conditions: </b>
-                                                        <br> &emsp;' . $postRowRent["rental_terms_and_conditions"] . '
-                                                    </p>
-                                                </div>
-                                                <div class="col me-5">
-                                                    <div class="card" style="width: 18rem;">
-                                                        <img src="data:image/jpeg;base64,' . base64_encode($postRowRent["rent_book_photo"]) . '" class="card-img-top" alt="...">
-                                                        <div class="card-body container-fluid pb-1 pt-1" style="border: 1px solid #8A6342; color: #8A6342; background-color: #EEEBEB;">
-                                                            <div class="row p-0">
-                                                                <p class="col card-text fw-bold mb-0 px-1">FOR RENT</p>
-                                                                <p class="col card-text fw-bold mb-0 px-1 text-end">' . $postRowRent["rental_price"] . '</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mt-2 px-2">
-                                                <div id="post-button" class="col btn d-flex justify-content-center">
-                                                    <img src="../assets/like-icon.png" alt="like-icon" class="img" width="30">
-                                                    <p class="my-auto ms-2 fw-bold">Like</p>
-                                                </div>
-                                                <div id="post-button" class="col btn d-flex justify-content-center">
-                                                    <img src="../assets/add-to-cart-icon.png" alt="cart-icon" class="img" width="30">
-                                                    <p class="my-auto ms-2 fw-bold">Add to Cart</p>
-                                                </div>
-                                                <div id="post-button" class="col btn d-flex justify-content-center">
-                                                    <img src="../assets/add-to-wishlist-icon.png" alt="wish-icon" class="img" width="30">
-                                                    <p class="my-auto ms-2 fw-bold">Add to Wish List</p>
-                                                </div>
-                                                <div id="post-button" class="col btn d-flex justify-content-center">
-                                                    <img src="../assets/message-seller-icon.png" alt="chat-icon" class="img" width="30">
-                                                    <p class="my-auto ms-2 fw-bold">Message Seller</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>';
-                                    }
-                                    ?>
+                                    
+                                    
                                 </div>
                             </div>
                         </div>
