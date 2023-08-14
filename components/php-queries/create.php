@@ -11,6 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         updateUser();
     } else if (!empty($_REQUEST["postSale"])) {
         createPostSale();
+    } else if (!empty($_REQUEST["postExchange"])) {
+        createPostExchange();
+    } else if (!empty($_REQUEST["postRent"])) {
+        createPostRent();
     } else {
         echo "error bitch";
     }
@@ -94,8 +98,8 @@ function createPostSale() {
     $edition =$_REQUEST["edition"];
     $language = $_REQUEST["language"];
 
-    try {
-        $sql = "INSERT INTO `book_sale_post`(`title`, `author`, `genre`, `condition`, `price`, `edition`, `language`, `book_photo`) VALUES ('$title','$author','$genre','$condition','$price','$edition','$language','$book_img_data')";
+    try {        
+        $sql = "INSERT INTO `book_sale_post`(`sale_title`, `sale_author`, `sale_genre`, `sale_condition`, `sale_price`, `sale_edition`, `sale_language`, `sale_book_photo`) VALUES ('$title','$author','$genre','$condition','$price','$edition','$language','$book_img_data')";
         $conn->query($sql);
         $conn->close();
         header("Location: ../homepage.php");
@@ -103,4 +107,57 @@ function createPostSale() {
         echo $th;
     }
     
+}
+
+function createPostExchange() {
+    include "./connection.php";
+
+    $book_image = $_FILES["imageExchange"]["name"];
+    $book_img_data = addslashes(file_get_contents($_FILES["imageExchange"]["tmp_name"]));
+
+    $title = $_REQUEST["title"];
+    $edition = $_REQUEST["edition"];
+    $genre = $_REQUEST["genre"];
+    $author = $_REQUEST["author"];
+    $language = $_REQUEST["language"];
+    $condition = $_REQUEST["condition"];
+    $exchange_preference = $_REQUEST["exchange-preference"];
+
+    echo $title . " " . $edition . " " . $genre . " " . $author . " " . $language . " " . $condition . " " . $exchange_preference;
+
+    try {
+        $sql = "INSERT INTO `book_exchange_post`(`exchange_title`, `exchange_author`, `exchange_genre`, `exchange_condition`, `exchange_edition`, `exchange_language`, `exchange_preferences`, `exchange_book_photo`) VALUES ('$title','$author','$genre','$condition','$edition','$language','$exchange_preference','$book_img_data')";
+        $conn->query($sql);
+        $conn->close();
+        header("Location: ../homepage.php");
+    } catch (\Exception $th) {
+        echo $th;
+    }
+}
+
+function createPostRent() {
+    include "./connection.php";
+    
+    $book_image = $_FILES["imageRent"]["name"];
+    $book_img_data = addslashes(file_get_contents($_FILES["imageRent"]["tmp_name"]));
+
+    $title = $_REQUEST["title"];
+    $edition = $_REQUEST["edition"];
+    $genre = $_REQUEST["genre"];
+    $rental_price = $_REQUEST["rentalPrice"];
+    $security_deposit = $_REQUEST["securityDeposit"];
+    $author = $_REQUEST["author"];
+    $language = $_REQUEST["language"];
+    $condition = $_REQUEST["condition"];
+    $rental_duration = $_REQUEST["rentalDuration"];
+    $terms_and_condition = $_REQUEST["termsAndCondition"];
+
+    try {
+        $sql = "INSERT INTO `book_rent_post`(`rent_title`, `rent_author`, `rent_genre`, `rent_condition`, `rent_edition`, `rent_language`, `rental_duration`, `security_deposit`, `rental_terms_and_conditions`, `rental_price`, `rent_book_photo`) VALUES ('$title','$author','$genre','$condition','$edition','$language','$rental_duration','$security_deposit','$terms_and_condition','$rental_price','$book_img_data')";
+        $conn->query($sql);
+        $conn->close();
+        header("Location: ../homepage.php");
+    } catch (\Exception $th) {
+        echo $th;
+    }
 }
