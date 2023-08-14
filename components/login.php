@@ -59,6 +59,7 @@
                                             session_start();
                                             $_SESSION["Username"] = $_REQUEST['username'];
                                             $_SESSION["Password"] = $_REQUEST['password'];
+                                            $_SESSION["id"] = $row["id"];
                                             header("Location: homepage.php");
                                             exit();
                                         }

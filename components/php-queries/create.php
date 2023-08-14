@@ -90,6 +90,7 @@ function createPostSale() {
     $book_image = $_FILES["imageSale"]["name"];
     $book_img_data = addslashes(file_get_contents($_FILES["imageSale"]["tmp_name"]));
 
+    $poser_id = $_REQUEST["post_id"];
     $title = $_REQUEST["title"];
     $author = $_REQUEST["author"];
     $genre = $_REQUEST["genre"];
@@ -97,9 +98,11 @@ function createPostSale() {
     $price = $_REQUEST["price"];
     $edition =$_REQUEST["edition"];
     $language = $_REQUEST["language"];
-
+    
     try {        
-        $sql = "INSERT INTO `book_sale_post`(`sale_title`, `sale_author`, `sale_genre`, `sale_condition`, `sale_price`, `sale_edition`, `sale_language`, `sale_book_photo`) VALUES ('$title','$author','$genre','$condition','$price','$edition','$language','$book_img_data')";
+        // $sql = "INSERT INTO `book_sale_post`(`sale_user_ID`, sale_title`, `sale_author`, `sale_genre`, `sale_condition`, `sale_price`, `sale_edition`, `sale_language`, `sale_book_photo`) VALUES ('$poser_id','$title','$author','$genre','$condition','$price','$edition','$language','$book_img_data')";
+        $sql = "INSERT INTO `book_sale_post`(`sale_user_ID`, `sale_title`, `sale_author`, `sale_genre`, `sale_condition`, `sale_price`, `sale_edition`, `sale_language`, `sale_book_photo`) VALUES ('$poser_id','$title','$author','$genre','$condition','$price','$edition','$language','$book_img_data')";
+        // $sql = "INSERT INTO `book_sale_post`(`sale_user_ID`, `sale_title`) SELECT `id`, 'random' FROM users";
         $conn->query($sql);
         $conn->close();
         header("Location: ../homepage.php");
@@ -115,6 +118,7 @@ function createPostExchange() {
     $book_image = $_FILES["imageExchange"]["name"];
     $book_img_data = addslashes(file_get_contents($_FILES["imageExchange"]["tmp_name"]));
 
+    $poser_id = $_REQUEST["post_id"];
     $title = $_REQUEST["title"];
     $edition = $_REQUEST["edition"];
     $genre = $_REQUEST["genre"];
@@ -126,7 +130,7 @@ function createPostExchange() {
     echo $title . " " . $edition . " " . $genre . " " . $author . " " . $language . " " . $condition . " " . $exchange_preference;
 
     try {
-        $sql = "INSERT INTO `book_exchange_post`(`exchange_title`, `exchange_author`, `exchange_genre`, `exchange_condition`, `exchange_edition`, `exchange_language`, `exchange_preferences`, `exchange_book_photo`) VALUES ('$title','$author','$genre','$condition','$edition','$language','$exchange_preference','$book_img_data')";
+        $sql = "INSERT INTO `book_exchange_post`(`exchange_user_ID`, `exchange_title`, `exchange_author`, `exchange_genre`, `exchange_condition`, `exchange_edition`, `exchange_language`, `exchange_preferences`, `exchange_book_photo`) VALUES ('$poser_id','$title','$author','$genre','$condition','$edition','$language','$exchange_preference','$book_img_data')";
         $conn->query($sql);
         $conn->close();
         header("Location: ../homepage.php");
@@ -141,6 +145,7 @@ function createPostRent() {
     $book_image = $_FILES["imageRent"]["name"];
     $book_img_data = addslashes(file_get_contents($_FILES["imageRent"]["tmp_name"]));
 
+    $poser_id = $_REQUEST["post_id"];
     $title = $_REQUEST["title"];
     $edition = $_REQUEST["edition"];
     $genre = $_REQUEST["genre"];
@@ -153,7 +158,7 @@ function createPostRent() {
     $terms_and_condition = $_REQUEST["termsAndCondition"];
 
     try {
-        $sql = "INSERT INTO `book_rent_post`(`rent_title`, `rent_author`, `rent_genre`, `rent_condition`, `rent_edition`, `rent_language`, `rental_duration`, `security_deposit`, `rental_terms_and_conditions`, `rental_price`, `rent_book_photo`) VALUES ('$title','$author','$genre','$condition','$edition','$language','$rental_duration','$security_deposit','$terms_and_condition','$rental_price','$book_img_data')";
+        $sql = "INSERT INTO `book_rent_post`(`rent_user_ID`,`rent_title`, `rent_author`, `rent_genre`, `rent_condition`, `rent_edition`, `rent_language`, `rental_duration`, `security_deposit`, `rental_terms_and_conditions`, `rental_price`, `rent_book_photo`) VALUES ('$poser_id','$title','$author','$genre','$condition','$edition','$language','$rental_duration','$security_deposit','$terms_and_condition','$rental_price','$book_img_data')";
         $conn->query($sql);
         $conn->close();
         header("Location: ../homepage.php");

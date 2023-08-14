@@ -4,22 +4,26 @@ session_start();
 
 $user = $_SESSION["Username"];
 $pass = $_SESSION["Password"];
+$id = $_SESSION["id"];
 
 try {
+    // SELECT book_sale_post.*, users.FirstName, users.LastName, users.ProfilePhoto FROM book_sale_post INNER JOIN users ON book_sale_post.sale_user_ID = users.id
     $sql = "SELECT * FROM `users` WHERE Username = '$user' && Password = '$pass'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
 
     if ($row) {
         try {
-            $sqlPostSale = "SELECT * FROM book_sale_post";
+            $sqlPostSale = "SELECT book_sale_post.*, users.* FROM book_sale_post INNER JOIN users ON book_sale_post.sale_user_ID = users.id";
             $result_query_sale = $conn->query($sqlPostSale);
 
-            $sqlPostExchange = "SELECT * FROM book_exchange_post";
+            $sqlPostExchange = "SELECT book_exchange_post.*, users.* FROM book_exchange_post INNER JOIN users ON book_exchange_post.exchange_user_ID = users.id";
             $result_query_exchange = $conn->query($sqlPostExchange);
 
-            $sqlPostRent = "SELECT * FROM book_rent_post";
+            $sqlPostRent = "SELECT book_rent_post.*, users.* FROM book_rent_post INNER JOIN users ON book_rent_post.rent_user_ID = users.id";
             $result_query_rent = $conn->query($sqlPostRent);
+
+            // $sqlPost = "";
 ?>
             <!DOCTYPE html>
             <html lang="en">
@@ -163,7 +167,9 @@ try {
                                         echo '<img class="col-3 img rounded-circle" src="data:image/jpeg;base64,' . base64_encode($row["ProfilePhoto"]) . '" alt="profile">';
                                         ?>
                                         <div class="col" style="color: #8A6342;">
-                                            <?php echo '<h2 id="name" class="fw-bold">' . $row["FirstName"] . ' ' . $row["LastName"] . '</h2>' ?>
+                                            <?php
+                                            echo '<h2 id="name" class="fw-bold">' . $row["FirstName"] . ' ' . $row["LastName"] . '</h2>';
+                                            ?>
                                             <p>
                                                 2.9K Followers . 500 Following <br>
                                                 Lives in <?php echo $row["Address"]; ?>
@@ -243,11 +249,12 @@ try {
                                 <div class="container">
                                     <!-- FOR SALE -->
                                     <?php
+                                    // $saleRows = $result_query_sale->num_rows;
                                     while ($postRowSale = $result_query_sale->fetch_assoc()) {
                                         echo '<div class="row border mt-4 px-4 py-3 shadow rounded rounded-3" style="color: #8A6342;">
                                     <div class="col p-0 d-flex justify-content-start">
-                                        <img class="img-fluid" src="../assets/profile.png" alt="profile" width="70">
-                                        <p class="fw-bold fs-4 ms-3 my-auto">Nestine Nicole Navarro</p>
+                                        <img class="img-fluid rounded-circle" src="data:image/jpeg;base64,' . base64_encode($postRowSale["ProfilePhoto"]) . '" alt="profile" width="70">
+                                        <p class="fw-bold fs-4 ms-3 my-auto">' . $postRowSale["FirstName"] . ' ' . $postRowSale["LastName"] . '</p>
                                     </div>
                                     <div class="col-1">
                                         <div class="mt-3 d-flex justify-content-end dropdown p-0">
@@ -301,13 +308,14 @@ try {
                                         </div>
                                     </div>
                                 </div>';
+                                        $saleRows--;
                                     }
                                     // For Exchange
                                     while ($postRowExchange = $result_query_exchange->fetch_assoc()) {
                                         echo '<div class="row border mt-4 px-4 py-3 shadow rounded rounded-3" style="color: #8A6342;">
                                         <div class="col p-0 d-flex justify-content-start">
-                                            <img class="img-fluid" src="../assets/profile.png" alt="profile" width="70">
-                                            <p class="fw-bold fs-4 ms-3 my-auto">Nestine Nicole Navarro</p>
+                                            <img class="img-fluid rounded-circle" src="data:image/jpeg;base64,' . base64_encode($postRowExchange["ProfilePhoto"]) . '" alt="profile" width="70">
+                                            <p class="fw-bold fs-4 ms-3 my-auto">' . $postRowExchange["FirstName"] . ' ' . $postRowExchange["LastName"] .'</p>
                                         </div>
                                         <div class="col-1">
                                             <div class="mt-3 d-flex justify-content-end dropdown p-0">
@@ -367,8 +375,8 @@ try {
                                     while ($postRowRent = $result_query_rent->fetch_assoc()) {
                                         echo '<div class="row border mt-4 px-4 py-3 shadow rounded rounded-3" style="color: #8A6342;">
                                         <div class="col p-0 d-flex justify-content-start">
-                                            <img class="img-fluid" src="../assets/profile.png" alt="profile" width="70">
-                                            <p class="fw-bold fs-4 ms-3 my-auto">Nestine Nicole Navarro</p>
+                                            <img class="img-fluid" src="data:image/jpeg;base64,' . base64_encode($postRowExchange["ProfilePhoto"]) . '" alt="profile" width="70">
+                                            <p class="fw-bold fs-4 ms-3 my-auto">' . $postRowRent["FirstName"] . ' ' . $postRowRent["LastName"] . '</p>
                                         </div>
                                         <div class="col-1">
                                             <div class="mt-3 d-flex justify-content-end dropdown p-0">
@@ -482,6 +490,7 @@ try {
                                 <div class="container">
                                     <div class="row">
                                         <div class="col">
+                                            <input type="text" name="post_id" value="<?php echo $id; ?>" hidden>
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control border border-black" id="floatingInput" name="title" placeholder="name@example.com" required>
                                                 <label for="floatingInput">Title</label>
@@ -545,6 +554,7 @@ try {
                                 <div class="container">
                                     <div class="row">
                                         <div class="col">
+                                            <input type="text" name="post_id" value="<?php echo $id; ?>" hidden>
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control border border-black" id="floatingInput" name="title" placeholder="name@example.com">
                                                 <label for="floatingInput">Title</label>
@@ -608,6 +618,7 @@ try {
                                 <div class="container">
                                     <div class="row">
                                         <div class="col">
+                                            <input type="text" name="post_id" value="<?php echo $id; ?>" hidden>
                                             <div class="form-floating mb-3">
                                                 <input type="text" class="form-control border border-black" id="floatingInput" name="title" placeholder="name@example.com">
                                                 <label for="floatingInput">Title</label>
