@@ -109,6 +109,41 @@ try {
                 #post-button:hover p {
                     color: #FFF;
                 }
+
+                #sold {
+                    background-color: #92844F5C;
+                }
+
+                #exchange-btn {
+                    background-color: white;
+                    font-size: 15px;
+                }
+
+                #exchange-btn:hover {
+                    background-color: #92844F5C;
+                    text-decoration: underline;
+                }
+
+                #review-btn {
+                    color: #8A6342;
+                    border: 1px solid #8A6342;
+                }
+
+                #review-btn:hover {
+                    color: #fff;
+                    border: 1px solid #8A6342;
+                    background-color: #8A6342;
+                }
+
+                #view-details-btn {
+                    color: #8A6342;
+                    border: 1px solid #8A6342;
+                }
+
+                #view-details-btn:hover {
+                    color: #fff;
+                    background-color: #8A6342;
+                }
             </style>
 
             <body>
@@ -237,18 +272,90 @@ try {
                                         </div>
                                     </div>
                                     <div class="row py-3 fw-bold px-5 text-center border-bottom rounded-bottom">
-                                        <a id="posts" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Posts</a>
-                                        <a id="liked" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Liked</a>
+                                        <a id="posts" class="col m-0 home-anchors" href="./homepage.php" style="color: #8A6342;">Posts</a>
+                                        <a id="liked" class="col m-0 home-anchors" href="./likes.php" style="color: #8A6342;">Liked</a>
                                         <a id="reviews" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Reviews</a>
                                         <a id="wish-list" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Wish List</a>
                                         <a id="bookshelf" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Bookshelf</a>
                                     </div>
                                 </div>
+                                <div class="container rounded border">
+                                    <div class="row text-center fw-bold">
+                                        <a id="exchange-btn" class="col btn fw-bold p-2" href="./reviews-exchange.php" style="color: #8A6342;">
+                                            Exchange Rating
+                                        </a>
+                                        <a id="exchange-btn" class="col btn fw-bold p-2" href="./reviews-rented.php" style="color: #8A6342;">
+                                            Rented Rating
+                                        </a>
+                                        <a id="exchange-btn" class="col btn fw-bold p-2" href="./reviews-lent.php" style="color: #8A6342;">
+                                            Lent Rating
+                                        </a>
+                                        <a id="exchange-btn sold" class="col btn fw-bold p-2" style="color: #8A6342;">
+                                            Sold Rating
+                                        </a>
+                                        <a id="exchange-btn" class="col btn fw-bold p-2" href="./reviews-bought.php" style="color: #8A6342;">
+                                            Bought Rating
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="container rounded shadow border">
+                                    <div class="row text-center fw-bold">
+                                        <div class="col" style="color: #8A6342;">
+                                            <h4 class="fw-bold mt-3">4.9</h4>
+                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
+                                            <i><img src="../assets/icons_star_none.png" alt="star" width="20"></i>
+                                        </div>
+                                        <div class="col d-flex flex-column p-2">
+                                            <button id="review-btn" class="btn fw-bold rounded mb-2">ALL (10)</button>
+                                            <button id="review-btn" class="btn fw-bold rounded">3 Star (10)</button>
+                                        </div>
+                                        <div class="col d-flex flex-column p-2">
+                                            <button id="review-btn" class="btn fw-bold rounded mb-2">5 Star (10)</button>
+                                            <button id="review-btn" class="btn fw-bold rounded">2 Star (10)</button>
+                                        </div>
+                                        <div class="col d-flex flex-column p-2">
+                                            <button id="review-btn" class="btn fw-bold rounded mb-2">4 Star (10)</button>
+                                            <button id="review-btn" class="btn fw-bold rounded">1 Star (10)</button>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <!-- POST CONTENTS -->
-                                <div class="container">
-                                    
-                                    
+                                <div class="container mt-4 rounded shadow border">
+                                    <div class="row p-3">
+                                        <div class="col-1 p-2">
+                                            <i><img class="rounded-circle" src="../assets/accounts.png" alt="icon" width="50"></i>
+                                        </div>
+                                        <div class="col-3 p-2">
+                                            <h5 class="m-0 fw-bold" style="color: #8A6342;">g***rt3</h5>
+                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
+                                            <i><img src="../assets/icons_star_none.png" alt="star" width="20"></i>
+                                            <p class="fw-bold mb-0 mt-3">Sold</p>
+                                            <p class="m-0">Harry Potter</p>
+                                            <p class="m-0">22/07/2023 11:03</p>
+                                            <button id="view-details-btn" class="btn fw-bold fs-6 mt-3" data-bs-toggle="modal" data-bs-target="#exchangeRating">View Details</button>
+                                        </div>
+                                        <div class="col p-2">
+                                            <img src="../assets/book-template.png" alt="book-image">
+                                        </div>
+                                        <div class="col-2 p-2">
+                                            <div class="d-flex justify-content-end">
+                                                <a class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <img src="../assets/dot-menu.png" alt="menu">
+                                                </a>
+                                                <ul class="dropdown-menu" style="background-color: #EAEAEA;">
+                                                    <li><a class="dropdown-item" href="#">Reply</a></li>
+                                                    <li><a class="dropdown-item" href="#">Report</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -256,236 +363,68 @@ try {
                 </div>
 
                 <!-- Modal -->
-
-                <!-- New Post modal -->
-                <div class="modal fade" id="createPost" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
+                <!-- Exchange Rating modal -->
+                <div class="modal fade" id="exchangeRating" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content rounded-4">
                             <div class="modal-header">
                                 <h1 class="modal-title text-center w-100 fw-bold fs-5" id="staticBackdropLabel">Create New Post</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
-                                <label for="form-select form-select-md">Post is</label>
-                                <select id="newPost" class="form-select" aria-label="Default select example">
-                                    <option value="FOR SALE">For Sale</option>
-                                    <option value="FOR EXCHANGE">For Exchange</option>
-                                    <option value="FOR RENT">For Rent</option>
-                                </select>
+                            <div class="modal-body ">
+                                <div class="container">
+                                    <div class="row mx-5">
+                                        <div class="col-2">
+                                            <i><img class="rounded-circle" src="../assets/accounts.png" alt="profile-image" width="70"></i>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="m-0 fw-bold" style="color: #8A6342;">g***rt3</h5>
+                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
+                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
+                                            <i><img src="../assets/icons_star_none.png" alt="star" width="20"></i>
+                                            <p class="fw-bold mb-2 mt-3">Sold</p>
+                                            <p class="mb-2">Harry Potter</p>
+                                            <p class="mb-2">22/07/2023, 11:03</p>
+
+                                            <p class="mt-4"><b>Condition:</b> 10/10</p>
+                                            <p class=""><b>Accuracy of Description:</b> 10/10</p>
+                                            <p class=""><b>Interaction:</b> 10/10</p>
+                                            <p class=""><b>Condition:</b> 10/10</p>
+                                            <p class="">Nice book. Good job exchanger!</p>
+                                        </div>
+                                        <div class="col">
+                                            <img class="img-fluid w-100" src="../assets/book-template.png" alt="book-image">
+                                            <div class="w-100 d-flex justify-content-end">
+                                                <a class="mt-2 fw-bold mx-2" href="#" style="color: #8A6342;">Reply</a>
+                                                <a class="mt-2 fw-bold mx-2" href="#" style="color: #8A6342;">Report</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="modal-footer">
-                                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                            <div class="border border-2 py-3 px-3 mb-5 w-100">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-2 text-end">
+                                            <i><img src="../assets/accounts.png" alt="commenter-profile"></i>
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="fw-bold" style="color: #8A6342;">Nestine Nicole Navarro</h5>
+                                            <p class="mb-0">Thank you so much!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 <button type="button" class="btn text-white fw-bold rounded-pill px-4" data-bs-dismiss="modal" style="background-color: #CE9461;" onclick="newPost()">Next</button>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
 
-                <!-- For Sale -->
-                <div class="modal fade" id="for-sale" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <form class="modal-dialog modal-lg modal-dialog-scrollable" action="./php-queries/create.php?postSale=sample" method="post" enctype="multipart/form-data">
-                        <div class="modal-content rounded-4">
-
-                            <div class="modal-header">
-                                <h1 class="modal-title text-center w-100 fw-bold fs-5" id="staticBackdropLabel">Create New Post for Sale</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body text-center">
-                                <!-- <img src="../assets/image.png" alt="book_image" class="img" width="130"> -->
-
-                                <div class="custom-file text-center">
-                                    <label class="custom-file-label border" for="imageSale" style="background-color: #D9D9D9; cursor: pointer; width: 130px;"><i><img class="w-100" src="../assets/image.png" id="img-sale" alt="image icon"></i></label>
-                                    <input type="file" class="d-none custom-file-input" id="imageSale" name="imageSale" accept="image/*" required>
-                                    <p>Photos 0/1 . Choose your book’s thumbnail </p>
-                                </div>
-
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col">
-                                            <input type="text" name="post_id" value="<?php echo $id; ?>" hidden>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="title" placeholder="name@example.com" required>
-                                                <label for="floatingInput">Title</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="edition" placeholder="name@example.com" required>
-                                                <label for="floatingInput">Edition</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="genre" placeholder="name@example.com" required>
-                                                <label for="floatingInput">Genre</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="price" placeholder="name@example.com" required>
-                                                <label for="floatingInput">Price</label>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="author" placeholder="name@example.com" required>
-                                                <label for="floatingInput">Author</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="language" placeholder="name@example.com" required>
-                                                <label for="floatingInput">Language</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="condition" placeholder="name@example.com" required>
-                                                <label for="floatingInput">Condition </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="modal-footer">
-                                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                                <button type="submit" class="btn text-white fw-bold rounded-pill px-4" style="background-color: #CE9461;" onclick="">POST</button>
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-
-                <!-- For Exchange -->
-                <div class="modal fade" id="for-exchange" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <!-- <div class="modal-dialog modal-lg modal-dialog-scrollable"> -->
-                    <form class="modal-dialog modal-lg modal-dialog-scrollable" action="./php-queries/create.php?postExchange=exchange" method="post" enctype="multipart/form-data">
-                        <div class="modal-content rounded-4">
-                            <div class="modal-header">
-                                <h1 class="modal-title text-center w-100 fw-bold fs-5" id="staticBackdropLabel">Create New Post for Exchange</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body text-center">
-                                <!-- <img src="../assets/image.png" alt="book_image" class="img" width="130"> -->
-                                <div class="custom-file text-center">
-                                    <label class="custom-file-label border" for="imageExchange" style="background-color: #D9D9D9; cursor: pointer; width: 130px;"><i><img class="w-100" src="../assets/image.png" id="img-exchange" alt="image icon"></i></label>
-                                    <input type="file" class="d-none custom-file-input" id="imageExchange" name="imageExchange" accept="image/*">
-                                    <p>Photos 0/1 . Choose your book’s thumbnail </p>
-                                </div>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col">
-                                            <input type="text" name="post_id" value="<?php echo $id; ?>" hidden>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="title" placeholder="name@example.com">
-                                                <label for="floatingInput">Title</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="edition" placeholder="name@example.com">
-                                                <label for="floatingInput">Edition</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="genre" placeholder="name@example.com">
-                                                <label for="floatingInput">Genre</label>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="author" placeholder="name@example.com">
-                                                <label for="floatingInput">Author</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="language" placeholder="name@example.com">
-                                                <label for="floatingInput">Language</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="condition" placeholder="name@example.com">
-                                                <label for="floatingInput">Condition </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-floating">
-                                        <textarea class="form-control border border-black" placeholder="Leave a comment here" name="exchange-preference" id="floatingTextarea" style="height: 100px;"></textarea>
-                                        <label for="floatingTextarea">Exchange Preferences</label>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="modal-footer">
-                                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                                <button type="submit" class="btn text-white fw-bold rounded-pill px-4" style="background-color: #CE9461;" onclick="">POST</button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- </div> -->
-                </div>
-
-                <!-- For Rent -->
-                <div class="modal fade" id="for-rent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <!-- <div class="modal-dialog modal-lg modal-dialog-scrollable"> -->
-                    <form class="modal-dialog modal-lg modal-dialog-scrollable" action="./php-queries/create.php?postRent=rent" method="post" enctype="multipart/form-data">
-                        <div class="modal-content rounded-4">
-                            <div class="modal-header">
-                                <h1 class="modal-title text-center w-100 fw-bold fs-5" id="staticBackdropLabel">Create New Post for Rent</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body text-center">
-                                <!-- <img src="../assets/image.png" alt="book_image" class="img" width="130"> -->
-                                <div class="custom-file text-center">
-                                    <label class="custom-file-label border" for="imageRent" style="background-color: #D9D9D9; cursor: pointer; width: 130px;"><i><img class="w-100" src="../assets/image.png" id="img-rent" alt="image icon"></i></label>
-                                    <input type="file" class="d-none custom-file-input" id="imageRent" name="imageRent" accept="image/*">
-                                    <p>Photos 0/1 . Choose your book’s thumbnail </p>
-                                </div>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col">
-                                            <input type="text" name="post_id" value="<?php echo $id; ?>" hidden>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="title" placeholder="name@example.com">
-                                                <label for="floatingInput">Title</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="edition" placeholder="name@example.com">
-                                                <label for="floatingInput">Edition</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="genre" placeholder="name@example.com">
-                                                <label for="floatingInput">Genre</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="rentalPrice" placeholder="name@example.com">
-                                                <label for="floatingInput">Rental Price</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="securityDeposit" placeholder="name@example.com">
-                                                <label for="floatingInput">Security Deposit</label>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="author" placeholder="name@example.com">
-                                                <label for="floatingInput">Author</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="language" placeholder="name@example.com">
-                                                <label for="floatingInput">Language</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="condition" placeholder="name@example.com">
-                                                <label for="floatingInput">Condition </label>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control border border-black" id="floatingInput" name="rentalDuration" placeholder="name@example.com">
-                                                <label for="floatingInput">Rental Duration</label>
-                                            </div>
-                                            <div class="form-floating">
-                                                <textarea class="form-control border border-black" placeholder="Leave a comment here" id="floatingTextarea" name="termsAndCondition" style="height: 100px;"></textarea>
-                                                <label for="floatingTextarea">Rental Terms & Conditions</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="modal-footer">
-                                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                                <button type="submit" class="btn text-white fw-bold rounded-pill px-4" style="background-color: #CE9461;" onclick="">POST</button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- </div> -->
-                </div>
             </body>
             <script src="..//bootstrap/bootstrap.bundle.min.js"></script>
             <script>
@@ -496,29 +435,31 @@ try {
                     keyboard: false
                 });
 
-                const forSale = new bootstrap.Modal(document.getElementById('for-sale'), {
 
-                });
 
-                const forExchange = new bootstrap.Modal(document.getElementById('for-exchange'), {
-                    keyboard: false
-                });
+                // const forSale = new bootstrap.Modal(document.getElementById('for-sale'), {
 
-                const forRent = new bootstrap.Modal(document.getElementById('for-rent'), {
-                    keyboard: false
-                });
+                // });
 
-                function newPost() {
-                    var post_value = document.getElementById("newPost").value;
+                // const forExchange = new bootstrap.Modal(document.getElementById('for-exchange'), {
+                //     keyboard: false
+                // });
 
-                    if (post_value == "FOR SALE") {
-                        forSale.show();
-                    } else if (post_value == "FOR EXCHANGE") {
-                        forExchange.show();
-                    } else if (post_value == "FOR RENT") {
-                        forRent.show();
-                    }
-                }
+                // const forRent = new bootstrap.Modal(document.getElementById('for-rent'), {
+                //     keyboard: false
+                // });
+
+                // function newPost() {
+                //     var post_value = document.getElementById("newPost").value;
+
+                //     if (post_value == "FOR SALE") {
+                //         forSale.show();
+                //     } else if (post_value == "FOR EXCHANGE") {
+                //         forExchange.show();
+                //     } else if (post_value == "FOR RENT") {
+                //         forRent.show();
+                //     }
+                // }
 
                 // image
                 const saleImage = document.getElementById("imageSale");
