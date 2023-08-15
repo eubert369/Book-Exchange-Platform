@@ -94,7 +94,7 @@ try {
                     font-style: italic;
                 }
 
-                #reviews {
+                #wish-list {
                     border-bottom: 2px solid #8A6342;
                 }
 
@@ -110,7 +110,7 @@ try {
                     color: #FFF;
                 }
 
-                #bought {
+                #exchange {
                     background-color: #92844F5C;
                 }
 
@@ -122,6 +122,7 @@ try {
                 #exchange-btn:hover {
                     background-color: #92844F5C;
                     text-decoration: underline;
+
                 }
 
                 #review-btn {
@@ -143,6 +144,11 @@ try {
                 #view-details-btn:hover {
                     color: #fff;
                     background-color: #8A6342;
+                }
+
+                #listName, #privacy {
+                    background-color: #F1E9E9;
+                    border: 1px solid #8A6342;
                 }
             </style>
 
@@ -274,86 +280,72 @@ try {
                                     <div class="row py-3 fw-bold px-5 text-center border-bottom rounded-bottom">
                                         <a id="posts" class="col m-0 home-anchors" href="./user-profile.php" style="color: #8A6342;">Posts</a>
                                         <a id="liked" class="col m-0 home-anchors" href="./likes.php" style="color: #8A6342;">Liked</a>
-                                        <a id="reviews" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Reviews</a>
-                                        <a id="wish-list" class="col m-0 home-anchors" href="./wishList.php" style="color: #8A6342;">Wish List</a>
+                                        <a id="reviews" class="col m-0 home-anchors" href="./reviews-exchange.php" style="color: #8A6342;">Reviews</a>
+                                        <a id="wish-list" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Wish List</a>
                                         <a id="bookshelf" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Bookshelf</a>
                                     </div>
                                 </div>
-                                <div class="container rounded border">
-                                    <div class="row text-center fw-bold">
-                                        <a id="exchange-btn" class="col btn fw-bold p-2" href="./reviews-exchange.php" style="color: #8A6342;">
-                                            Exchange Rating
-                                        </a>
-                                        <a id="exchange-btn" class="col btn fw-bold p-2" href="./reviews-rented.php" style="color: #8A6342;">
-                                            Rented Rating
-                                        </a>
-                                        <a id="exchange-btn" class="col btn fw-bold p-2" href="./reviews-lent.php" style="color: #8A6342;">
-                                            Lent Rating
-                                        </a>
-                                        <a id="exchange-btn" class="col btn fw-bold p-2" href="./reviews-sold.php" style="color: #8A6342;">
-                                            Sold Rating
-                                        </a>
-                                        <a id="exchange-btn bought" class="col btn fw-bold p-2" style="color: #8A6342;">
-                                            Bought Rating
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="container rounded shadow border">
-                                    <div class="row text-center fw-bold">
-                                        <div class="col" style="color: #8A6342;">
-                                            <h4 class="fw-bold mt-3">4.9</h4>
-                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
-                                            <i><img src="../assets/icons_star_none.png" alt="star" width="20"></i>
+                                <div class="container rounded shadow border" style="background-color: #F6F3F3;">
+                                    <div class="row px-3 py-2">
+                                        <div class="col d-flex flex-row">
+                                            <p class="fw-bold m-0 align-self-center">Start building your list!</p>
+                                            <button class="btn text-decoration-underline fw-bold ms-2" style="color: #8A6342;" data-bs-toggle="modal" data-bs-target="#createList">Create</button>
                                         </div>
-                                        <div class="col d-flex flex-column p-2">
-                                            <button id="review-btn" class="btn fw-bold rounded mb-2">ALL (10)</button>
-                                            <button id="review-btn" class="btn fw-bold rounded">3 Star (10)</button>
-                                        </div>
-                                        <div class="col d-flex flex-column p-2">
-                                            <button id="review-btn" class="btn fw-bold rounded mb-2">5 Star (10)</button>
-                                            <button id="review-btn" class="btn fw-bold rounded">2 Star (10)</button>
-                                        </div>
-                                        <div class="col d-flex flex-column p-2">
-                                            <button id="review-btn" class="btn fw-bold rounded mb-2">4 Star (10)</button>
-                                            <button id="review-btn" class="btn fw-bold rounded">1 Star (10)</button>
+                                        <div class="col d-flex flex-row justify-content-end">
+                                            <label class="align-self-center fw-bold" for="dropD" style="color: #8A6342;">Sort By: </label>
+                                            <select class="form-select form-select-sm w-50 px-3 ms-2 text-center text-white fw-bold rounded" id="dropD" aria-label="Default select example" style="background-color: #8A6342;">
+                                                <!-- <option selected>Date Added (newest)</option> -->
+                                                <option value="Author (A to Z)">Author (A to Z)</option>
+                                                <option value="Author(Z to A)">Author(Z to A)</option>
+                                                <option value="Date Added(Newest)">Date Added(Newest)</option>
+                                                <option value="Date Added(Oldest)">Date Added(Oldest)</option>
+                                                <option value="Title(A to Z)">Title(A to Z)</option>
+                                                <option value="Title(Z to A)">Title(Z to A)</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- POST CONTENTS -->
-                                <div class="container mt-4 rounded shadow border">
-                                    <div class="row p-3">
-                                        <div class="col-1 p-2">
-                                            <i><img class="rounded-circle" src="../assets/accounts.png" alt="icon" width="50"></i>
+                                <div class="container mt-4 mb-4 rounded shadow border">
+                                    <div class="container">
+                                        <div class="d-flex flex-row px-2 py-2">
+                                            <h4 class="align-self-center fw-bold" style="color: #8A6342;">Nestine Wish List</h4>
+                                            <a class="btn"><img src="../assets/settings-icon.png" alt="icon"></a>
                                         </div>
-                                        <div class="col-3 p-2">
-                                            <h5 class="m-0 fw-bold" style="color: #8A6342;">g***rt3</h5>
-                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
-                                            <i><img src="../assets/icons_star_none.png" alt="star" width="20"></i>
-                                            <p class="fw-bold mb-0 mt-3">Bought</p>
-                                            <p class="m-0">Harry Potter</p>
-                                            <p class="m-0">22/07/2023 11:03</p>
-                                            <button id="view-details-btn" class="btn fw-bold fs-6 mt-3" data-bs-toggle="modal" data-bs-target="#exchangeRating">View Details</button>
-                                        </div>
-                                        <div class="col p-2">
-                                            <img src="../assets/book-template.png" alt="book-image">
-                                        </div>
-                                        <div class="col-2 p-2">
-                                            <div class="d-flex justify-content-end">
-                                                <a class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <img src="../assets/dot-menu.png" alt="menu">
-                                                </a>
-                                                <ul class="dropdown-menu" style="background-color: #EAEAEA;">
-                                                    <li><a class="dropdown-item" href="#">Reply</a></li>
-                                                    <li><a class="dropdown-item" href="#">Report</a></li>
-                                                </ul>
+                                        <div class="row px-2">
+                                            <div class="col mx-2 py-0 px-0 mb-3 border text-center" style="background-color: #8A6342;">
+                                                <img src="../assets/brown_book.png" alt="book" class="img mt-3 border">
+                                                <div class="container-fluid w-100 mt-3 p-2" style="background-color: #B9875D;">
+                                                    <p class="m-0 fw-bold" style="color: #4B321D;">Magic Falling</p>
+                                                </div>
+                                                <a class="m-0 text-decoration-none btn fw-bold" style="color: #4B321D;">See more ></a>
                                             </div>
+                                            <div class="col mx-2 py-0 px-0 mb-3 border text-center" style="background-color: #8A6342;">
+                                                <img src="../assets/yellow_book.png" alt="book" class="img mt-3 border">
+                                                <div class="container-fluid w-100 mt-3 p-2" style="background-color: #B9875D;">
+                                                    <p class="m-0 fw-bold" style="color: #4B321D;">Magic Falling</p>
+                                                </div>
+                                                <a class="m-0 text-decoration-none btn fw-bold" style="color: #4B321D;">See more ></a>
+                                            </div>
+                                            <div class="col mx-2 py-0 px-0 mb-3 border text-center" style="background-color: #8A6342;">
+                                                <img src="../assets/brown_book.png" alt="book" class="img mt-3 border">
+                                                <div class="container-fluid w-100 mt-3 p-2" style="background-color: #B9875D;">
+                                                    <p class="m-0 fw-bold" style="color: #4B321D;">Magic Falling</p>
+                                                </div>
+                                                <a class="m-0 text-decoration-none btn fw-bold" style="color: #4B321D;">See more ></a>
+                                            </div>
+                                            <div class="col mx-2 py-0 px-0 mb-3 border text-center" style="background-color: #8A6342;">
+                                                <img src="../assets/yellow_book.png" alt="book" class="img mt-3 border">
+                                                <div class="container-fluid w-100 mt-3 p-2" style="background-color: #B9875D;">
+                                                    <p class="m-0 fw-bold" style="color: #4B321D;">Magic Falling</p>
+                                                </div>
+                                                <a class="m-0 text-decoration-none btn fw-bold" style="color: #4B321D;">See more ></a>
+                                            </div>
+                                            <div class="progress px-0 mb-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar btn rounded-end" style="width: 10%; background-color: #DEA057;"></div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -363,64 +355,51 @@ try {
                 </div>
 
                 <!-- Modal -->
-                <!-- Exchange Rating modal -->
-                <div class="modal fade" id="exchangeRating" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <!-- Create List modal -->
+                <div class="modal fade" id="createList" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content rounded-4">
                             <div class="modal-header">
-                                <h1 class="modal-title text-center w-100 fw-bold fs-5" id="staticBackdropLabel">Create New Post</h1>
+                                <h1 class="modal-title text-center w-100 fw-bold fs-5" id="staticBackdropLabel">Create List</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body ">
-                                <div class="container">
-                                    <div class="row mx-5">
-                                        <div class="col-2">
-                                            <i><img class="rounded-circle" src="../assets/accounts.png" alt="profile-image" width="70"></i>
-                                        </div>
-                                        <div class="col">
-                                            <h5 class="m-0 fw-bold" style="color: #8A6342;">g***rt3</h5>
-                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
-                                            <i><img src="../assets/start-icon.png" alt="star" width="20"></i>
-                                            <i><img src="../assets/icons_star_none.png" alt="star" width="20"></i>
-                                            <p class="fw-bold mb-2 mt-3">Bought</p>
-                                            <p class="mb-2">Harry Potter</p>
-                                            <p class="mb-2">22/07/2023, 11:03</p>
+                            <div class="modal-body px-5">
+                                <p class="fs-5 text-start">All lists are private unless you share them with public. You can share your lists after you’ve created a list.</p>
 
-                                            <p class="mt-4"><b>Condition:</b> 10/10</p>
-                                            <p class=""><b>Accuracy of Description:</b> 10/10</p>
-                                            <p class=""><b>Interaction:</b> 10/10</p>
-                                            <p class=""><b>Condition:</b> 10/10</p>
-                                            <p class="">Nice book. Good job exchanger!</p>
-                                        </div>
-                                        <div class="col">
-                                            <img class="img-fluid w-100" src="../assets/book-template.png" alt="book-image">
-                                            <div class="w-100 d-flex justify-content-end">
-                                                <a class="mt-2 fw-bold mx-2" href="#" style="color: #8A6342;">Reply</a>
-                                                <a class="mt-2 fw-bold mx-2" href="#" style="color: #8A6342;">Report</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <label class="fw-bold" for="listName" style="color: #8A6342;">List Name</label> <br>
+                                <input class="form-control fw-bold rounded-4 mb-2 fs-5" id="listName" type="text" placeholder="Enter you list name" style="color: #8A6342;">
                             </div>
-                            <div class="border border-2 py-3 px-3 mb-5 w-100">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-2 text-end">
-                                            <i><img src="../assets/accounts.png" alt="commenter-profile"></i>
-                                        </div>
-                                        <div class="col">
-                                            <h5 class="fw-bold" style="color: #8A6342;">Nestine Nicole Navarro</h5>
-                                            <p class="mb-0">Thank you so much!</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="modal-footer py-0">
+                                <button type="button" class="btn text-white fw-bold rounded-pill px-4" data-bs-dismiss="modal" aria-label="Close" style="background-color: #CE9461;">Cancel</button>
+                                <button type="button" class="btn text-white fw-bold rounded-pill px-4" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#wishListSettings" style="background-color: #CE9461;" onclick="wishNext()">Next</button>
                             </div>
-                            <!-- <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn text-white fw-bold rounded-pill px-4" data-bs-dismiss="modal" style="background-color: #CE9461;" onclick="newPost()">Next</button>
-                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wish List Settings Modal -->
+                <div class="modal fade" id="wishListSettings" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content rounded-4">
+                            <div class="modal-header">
+                                <h1 class="modal-title text-center w-100 fw-bold fs-5" id="staticBackdropLabel">Wish List Settings</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body px-5">
+                                <label class="fw-bold" for="listName" style="color: #8A6342;">List Name</label> <br>
+                                <input class="form-control fw-bold rounded-4 mb-2 fs-5" id="listNameWish" type="text" placeholder="Enter you list name" style="color: #8A6342;">
+
+                                <label class="fw-bold" for="privacy" style="color: #8A6342;">Privacy</label> <br>
+                                <!-- <input class="form-control fw-bold rounded-4 mb-2 fs-5" id="privacy" type="text" placeholder="Enter you list name" style="color: #8A6342;"> -->
+                                <select name="privacy" id="privacy" class="form-select fw-bold rounded-4 mb-2 fs-5" style="color: #8A6342;">
+                                    <option value="Public">Public</option>
+                                    <option value="Private">Private</option>
+                                </select>
+                            </div>
+                            <div class="modal-footer py-0">
+                                <button type="button" class="btn text-white fw-bold rounded-pill px-4" data-bs-dismiss="modal" aria-label="Close" style="background-color: #CE9461;">Cancel</button>
+                                <button type="button" class="btn text-white fw-bold rounded-pill px-4" data-bs-dismiss="modal" style="background-color: #CE9461;">Save</button><br>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -434,8 +413,11 @@ try {
                 const createPost = new bootstrap.Modal(document.getElementById('createPost'), {
                     keyboard: false
                 });
-
-
+                
+                function wishNext() {
+                    const list_name = document.getElementById("listName").value;
+                    document.getElementById("listNameWish").value = list_name;                    
+                }
 
                 // const forSale = new bootstrap.Modal(document.getElementById('for-sale'), {
 

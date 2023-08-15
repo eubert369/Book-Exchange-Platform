@@ -272,10 +272,10 @@ try {
                                         </div>
                                     </div>
                                     <div class="row py-3 fw-bold px-5 text-center border-bottom rounded-bottom">
-                                        <a id="posts" class="col m-0 home-anchors" href="./homepage.php" style="color: #8A6342;">Posts</a>
+                                        <a id="posts" class="col m-0 home-anchors" href="./user-profile.php" style="color: #8A6342;">Posts</a>
                                         <a id="liked" class="col m-0 home-anchors" href="./likes.php" style="color: #8A6342;">Liked</a>
                                         <a id="reviews" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Reviews</a>
-                                        <a id="wish-list" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Wish List</a>
+                                        <a id="wish-list" class="col m-0 home-anchors" href="./wishList.php" style="color: #8A6342;">Wish List</a>
                                         <a id="bookshelf" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Bookshelf</a>
                                     </div>
                                 </div>

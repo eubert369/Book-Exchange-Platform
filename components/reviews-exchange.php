@@ -164,11 +164,11 @@ try {
                                 </button>
                                 <div class="col-3 col-lg-1 collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                                     <div class="navbar-nav px-2">
-                                        <a id="nav-icons" class="nav-link rounded-4 px-3 d-flex justify-content-end" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Home"><img src="../assets/home.png" alt="home" width="35"></a>
+                                        <a id="nav-icons" class="nav-link rounded-4 px-3 d-flex justify-content-end" href="./homepage.php" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Home"><img src="../assets/home.png" alt="home" width="35"></a>
                                         <a id="nav-icons" class="nav-link rounded-4 px-3 d-flex justify-content-end" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Cart"><img src="../assets/shopping-cart.png" alt="shopping" width="35"></a>
-                                        <a id="nav-icons" class="nav-link rounded-4 px-3 d-flex justify-content-end" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Messaging"><img src="../assets/message.png" alt="messaging" width="35"></a>
+                                        <a id="nav-icons" class="nav-link rounded-4 px-3 d-flex justify-content-end" href="./messaging.php" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Messaging"><img src="../assets/message.png" alt="messaging" width="35"></a>
                                         <a id="nav-icons" class="nav-link rounded-4 px-3 d-flex justify-content-end" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Notification"><img src="../assets/notif.png" alt="notification" width="35"></a>
-                                        <a id="nav-icons" class="nav-link rounded-4 ps-3 d-flex justify-content-end" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Profile"><img src="../assets/profile.png" alt="profile" width="35"></a>
+                                        <a id="nav-icons" class="nav-link rounded-4 ps-3 d-flex justify-content-end" href="./user-profile.php" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Profile"><img src="../assets/profile.png" alt="profile" width="35"></a>
                                         <a id="nav-icons" class="nav-link rounded-4 ps-3 d-flex justify-content-end" href="./login.php" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Logout"><img src="../assets/logout.png" alt="logout" width="35"></a>
                                     </div>
                                 </div>
@@ -273,10 +273,10 @@ try {
                                         </div>
                                     </div>
                                     <div class="row py-3 fw-bold px-5 text-center border-bottom rounded-bottom">
-                                        <a id="posts" class="col m-0 home-anchors" href="./homepage.php" style="color: #8A6342;">Posts</a>
+                                        <a id="posts" class="col m-0 home-anchors" href="./user-profile.php" style="color: #8A6342;">Posts</a>
                                         <a id="liked" class="col m-0 home-anchors" href="./likes.php" style="color: #8A6342;">Liked</a>
                                         <a id="reviews" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Reviews</a>
-                                        <a id="wish-list" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Wish List</a>
+                                        <a id="wish-list" class="col m-0 home-anchors" href="./wishList.php" style="color: #8A6342;">Wish List</a>
                                         <a id="bookshelf" class="col m-0 home-anchors" href="#" style="color: #8A6342;">Bookshelf</a>
                                     </div>
                                 </div>
