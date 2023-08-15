@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How It Works</title>
-    <link rel="icon" href="../assets/white-logo.png">
+    <link rel="icon" href="../assets/bookloopph-website-favicon-white.png">
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
