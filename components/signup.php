@@ -23,7 +23,7 @@
 </head>
 
 <body style="overflow-y: hidden; overflow-x: hidden;">
-    <form action="./php-queries/create.php?signUp=createUser" method="post">
+    <form id="signUpForm" action="./php-queries/create.php?signUp=createUser" method="post">
         <div class="container-fluid p-0 min-vh-100">
             <a class="btn position-absolute m-3 rounded-pill px-3 fw-bold" href="../index.php" style="background-color: #DEA0575E;">
                 <i class="rounded-circle p-2"><img style="width: 50px;" src="../assets/bookloopph-website-favicon-white.png" alt="logo" /></i>
@@ -35,8 +35,7 @@
                 </div>
                 <div class="col-6 p-0 d-flex justify-content-center align-items-end vh-100 pb-5" style="background-color: #E0D8B0;">
                     <div class="mx-5 w-75">
-                        <h1 class="fw-bold mb-3">Create an Account</h1>
-                        <!-- <form action="./php queries/create.php?signUp=createUser" method="post"> -->
+                        <h1 class="fw-bold mb-3">Create an Account</h1>                        
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control px-3 rounded-4" id="username" name="username" placeholder="null" style="border: 2px solid #CE9461;" required>
                             <label class="fw-bold" for="username">Username</label>
@@ -53,10 +52,9 @@
                             </small>
                         </div>
                         <div class="w-100 text-center">
-                            <button onclick="explore()" class="btn text-white px-4 rounded-4 w-50 fw-bold" style="background-color: #CE9461;">Join Now!</button>
+                            <button id="submitBtn" type="button" class="btn text-white px-4 rounded-4 w-50 fw-bold" style="background-color: #CE9461;">Join Now!</button>
                             <p class="fs-5 mt-5">Already have an account? <a href="login.php">Click here!</a></p>
-                        </div>
-                        <!-- </form> -->
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -70,23 +68,20 @@
         image.src = URL.createObjectURL(event.target.files[0]);
     }
 
-    function explore() {
+    document.getElementById("submitBtn").addEventListener('click', function() {
         var user = document.getElementById('username').value;
         var pass = document.getElementById('password').value;
-        // form.submit()
-        // var first = document.getElementById('firstName').value;
-        // var last = document.getElementById('lastName').value;
-        // var email = document.getElementById('email').value;
+        var form = document.getElementById("signUpForm");        
 
         if (user == "" || pass == "") {
             alert("please fill all the inputs");
-        } else {
-            // window.location.href = "#welcome";
+        } else if (pass.length <= 8) {
+            alert("password must have an 8 character minimum");
+        } else {            
+            // alert(user + " " + pass);
             form.submit();
         }
-    }
-
-
+    })    
 
     document.getElementById('show-password').addEventListener('mousedown', function() {
         document.querySelector('input[name=password]').setAttribute('type', 'text')

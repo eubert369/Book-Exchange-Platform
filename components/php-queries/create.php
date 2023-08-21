@@ -105,7 +105,7 @@ function createPostSale() {
         // $sql = "INSERT INTO `book_sale_post`(`sale_user_ID`, `sale_title`) SELECT `id`, 'random' FROM users";
         $conn->query($sql);
         $conn->close();
-        header("Location: ../homepage.php");
+        header("Location: ../user-profile.php");
     } catch (\Exception $th) {
         echo $th;
     }
@@ -133,7 +133,7 @@ function createPostExchange() {
         $sql = "INSERT INTO `book_exchange_post`(`exchange_user_ID`, `exchange_title`, `exchange_author`, `exchange_genre`, `exchange_condition`, `exchange_edition`, `exchange_language`, `exchange_preferences`, `exchange_book_photo`) VALUES ('$poser_id','$title','$author','$genre','$condition','$edition','$language','$exchange_preference','$book_img_data')";
         $conn->query($sql);
         $conn->close();
-        header("Location: ../homepage.php");
+        header("Location: ../user-profile.php");
     } catch (\Exception $th) {
         echo $th;
     }
@@ -161,7 +161,7 @@ function createPostRent() {
         $sql = "INSERT INTO `book_rent_post`(`rent_user_ID`,`rent_title`, `rent_author`, `rent_genre`, `rent_condition`, `rent_edition`, `rent_language`, `rental_duration`, `security_deposit`, `rental_terms_and_conditions`, `rental_price`, `rent_book_photo`) VALUES ('$poser_id','$title','$author','$genre','$condition','$edition','$language','$rental_duration','$security_deposit','$terms_and_condition','$rental_price','$book_img_data')";
         $conn->query($sql);
         $conn->close();
-        header("Location: ../homepage.php");
+        header("Location: ../user-profile.php");
     } catch (\Exception $th) {
         echo $th;
     }
