@@ -3,350 +3,211 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/bookloopph-website-favicon-white.png">
-    <link rel="stylesheet" href="./components/css/style.css">
+    <title>BookRedux</title>
+    <link rel="icon" href="./assets/BookRedux.png">
     <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap" rel="stylesheet">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
-
-</head>
-<title>BookLoopPH</title>
+    <link rel="stylesheet" href="./components/css/style.css">
 </head>
 
 <body>
-    <div class="container-fluid px-0">
-
-        <!-- NAVBAR -->
-        <nav id="navbar" class="navbar navbar-expand-lg w-100 fixed-top border-bottom border-black" style="background-color: #DEA057;">
-            <div class="container-fluid px-5">
-                <a class="navbar-brand text-center" href="#">
-                    <img id="logo" class="img-fluid" src="assets/bookloopph-website-favicon-white.png" alt="Bootstrap" width="50">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container-fluid p-0">
+        <!-- NAV -->
+        <nav class="navbar navbar-expand-lg shadow bg-light fixed-top">
+            <div class="container-fluid mx-3">
+                <a class="navbar-brand" href="#"><img src="./assets/Logo.png" alt="Logo" width="130" class="img"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse text-end" id="navbarNavAltMarkup">
-                    <div class="navbar-nav container-fluid justify-content-end">
-                        <a id="home" class="nav-link active text-white mx-3 fs-5" aria-current="page" href="#">Home</a>
-                        <a id="how-to-use" class="nav-link text-white mx-3 fs-5" href="components/hints.php">Hints</a>
-                        <a id="about-us" class="nav-link text-white mx-3 fs-5" href="./components/aboutUs.php">About Us</a>
-                        <a id="about-us" class="nav-link text-white mx-3 fs-5 fw-bold" href="./components/login.php">Login</a>
-                    </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mx-2 px-3">
+                            <a class="nav-link fs-5" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item mx-2 px-3">
+                            <a class="nav-link fs-5" href="#howItWorks">How it Works</a>
+                        </li>
+                        <li class="nav-item mx-2 px-3">
+                            <a class="nav-link fs-5" href="#hints">Hints</a>
+                        </li>
+                        <li class="nav-item mx-2 px-3">
+                            <a class="nav-link fs-5" href="#aboutUs">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex">
+                    <a id="login-btn" href="#" class="btn px-4 py-2 fw-bold">Login</a>
                 </div>
             </div>
         </nav>
 
-        <!-- MAIN -->
-        <main class="container-fluid px-0">
+        <!-- HOME -->
+        <div class="container-fluid offset border">
+            <div class="row min-vh-100 align-items-center">
+                <div id="landing-title" class="col mx-3">
+                    <h1 class="mx-2" style="font-size: 70px;">Uncover New Stories, Trade Used Pages</h1>
+                    <a id="signup-btn" href="#" class="btn fw-bold px-5 w-75 py-2 ms-2">Sign Up</a>
+                    <!-- <div class="d-flex justify-content-center mt-3">
+                        <a href="#" class="btn btn-outline-primary fw-bold px-5 py-2 mx-5 border border-primary">Get started</a>
+                        <a href="#" class="btn btn-outline-primary fw-bold px-5 py-2 mx-5 border border-primary">How it works</a>
+                    </div> -->
+                </div>
+                <div class="col mx-3 d-flex justify-content-center">
+                    <img class="img" src="./assets/Reading_book.gif" alt="Image" width="350" height="350">
+                </div>
+            </div>
+        </div>
 
-            <!-- HERO -->
-            <div class="min-vh-100">
-                <img id="bg-img" src="assets/index-bg.jpeg" alt="background image" class="img-fluid min-vh-100" style="filter: brightness(70%);">
-                <div class="position-absolute top-50 start-50 translate-middle w-100">
-                    <div id="contain-text" class=" p-3 w-100">
-                        <h1 class="text-center text-light fw-bold" style="font-size: 50px;">
-                            Welcome to BookLoopPH
-                        </h1>
-                        <p class="text-center text-light fs-3">
-                            Discover a vibrant community where you can<br>
-                            buy, sell, exchange, and rent your used books<br>
-                            with fellow book enthusiasts
-                        </p>
-                        <a id="join" href="./components/signup.php" class="btn rounded-pill fs-4 fw-bold bg-light position-absolute start-0 start-50 translate-middle-x w-25 p-1 mt-2">Join</a>
-                    </div>
+        <!-- HOW IT WORKS -->
+        <div id="howItWorks" class="container-fluid px-0 pt-5 min-vh-100 offset">
+            <h1 id="howItWorks-head" class="mx-auto text-center w-25 mt-5 pb-2">How it works</h1>
+            <div id="howItWorks-header" class="row w-75 mx-auto mt-4 px-5">
+                <div class="col text-center">
+                    <span class="fs-5">Selling</span>
+                </div>
+                <div class="col text-center">
+                    <span class="fs-5">Buying</span>
+                </div>
+                <div class="col text-center">
+                    <span class="fs-5">Exchange</span>
+                </div>
+                <div class="col text-center">
+                    <span class="fs-5">Rent</span>
+                </div>
+                <div class="col text-center">
+                    <span class="fs-5">Donate</span>
                 </div>
             </div>
 
-            <div class="offset position-relative min-vh-100 p-3">
-
-                <!-- HOW IT WORKS LINKS -->
-                <div class="row row-cols-4 g-4 m-5">
-                    <div class="col">
-                        <a href="components/howitworks.php?t=selling" class="card h-100 mx-auto text-decoration-none text-center text-white border-0" style="max-width: 14rem; background-color: #8A6342;">
-                            <div class="card-body">
-                                <img src="assets/Shop (1) 1.png" alt="shop">
-                            </div>
-                            <div class="card-footer border border-light border-3 border-top border-0 ">
-                                Shop <img src="assets/Next 1.png" alt="next" height="24px">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="components/howitworks.php?t=exchange" class="card h-100 mx-auto text-decoration-none text-center text-white border-0" style="max-width: 14rem; background-color: #8A6342;">
-                            <div class="card-body">
-                                <img src="assets/Exchange 1.png" alt="exchange">
-                            </div>
-                            <div class="card-footer border border-light border-3 border-top border-0">
-                                Exchange <img src="assets/Next 1.png" alt="next" height="24px">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="components/howitworks.php?t=rent" class="card h-100 mx-auto text-decoration-none text-center text-white border-0" style="max-width: 14rem; background-color: #8A6342;">
-                            <div class="card-body">
-                                <img src="assets/Rent 1.png" alt="rent">
-                            </div>
-                            <div class="card-footer border border-light border-3 border-top border-0 ">
-                                Rent <img src="assets/Next 1.png" alt="next" height="24px">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="components/howitworks.php?t=donate" class="card h-100 mx-auto text-decoration-none text-center text-white border-0" style="max-width: 14rem; background-color: #8A6342;">
-                            <div class="card-body">
-                                <img src="assets/Donate 1.png" alt="donate">
-                            </div>
-                            <div class="card-footer border border-light border-3 border-top border-0 ">
-                                Donate <img src="assets/Next 1.png" alt="next" height="24px">
-                            </div>
-                        </a>
+            <div class="row justify-content-center mt-5">
+                <div class="col-2 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">1</h1>
+                        <p class="card-text text-center">Create an Account</p>
                     </div>
                 </div>
-
-                <!-- ANOTHER HERO -->
-                <div class="container my-5 w-100 text-center" style="color: #8A6342;">
-                    <h2 class="fw-bold" style="font-size: 50px;">
-                        Build Your community
-                    </h2>
-                    <p class="fs-3">
-                        BookLoopPh is your ultimate destination for connecting book lovers and facilitating the exchange of knowledge. Whether you’re seeking a captivating novel, a rare gem, or looking to declutter your bookshelf, BookLoopPH offers a seamless platform to connect, share, and explore literary treasures.
-                    </p>
-                    <a href="./components/signup.php" class="btn text-decoration-none text-light rounded-pill fs-4 fw-bold w-25 p-1 mt-2" style="background-color: #8A6342;">
-                        Explore more
-                    </a>
-                </div>
-
-                <!-- PICTURES-OF-ENGAGEMENT -->
-                <div class="container my-5">
-                    <div class="d-flex justify-content-between mb-3">
-                        <div style="background-color: #F8F3EF;" class="rounded rounded-4">
-                            <img src="assets/111 1.png" alt="111">
-                        </div>
-                        <div style="background-color: #F8F3EF;" class="rounded rounded-4">
-                            <img src="assets/222 1.png" alt="222">
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-evenly px-md-5">
-                        <div style="background-color: #F8F3EF;" class="rounded rounded-4">
-                            <img src="assets/333 1.png" alt="333">
-                        </div>
-                        <div style="background-color: #F8F3EF;" class="rounded rounded-4">
-                            <img src="assets/444 1.png" alt="444">
-                        </div>
-                        <div style="background-color: #F8F3EF;" class="rounded rounded-4">
-                            <img src="assets/555 1.png" alt="555">
-                        </div>
+                <div class="col-2 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">2</h1>
+                        <p class="card-text text-center">Browse available books for renting</p>
                     </div>
                 </div>
-
-                <!-- NEW ARRIVAL -->
-                <div class="container my-5 d-flex flex-column gap-5">
-                    <h2 class="text-center fw-bold" style="font-size: 50px; color: #8A6342">
-                        New Arrival
-                    </h2>
-                    <div class="d-flex justify-content-evenly">
-                        <a href="#" class="text-center text-decoration-none" style="color: #8A6342">
-                            <img src="assets/b2 1.png" alt="b2">
-                            <div class="d-grid">
-                                <span class="fw-bold">Bible (Not Bubble Bath)</span>
-                                <span>Young Adult</span>
-                                <span class="fw-bold">P100.00</span>
-                            </div>
-                        </a>
-                        <a href="#" class="text-center text-decoration-none" style="color: #8A6342">
-                            <img src="assets/b2 1.png" alt="b2">
-                            <div class="d-grid">
-                                <span class="fw-bold">Bible (Not Bubble Bath)</span>
-                                <span>Young Adult</span>
-                                <span class="fw-bold">P100.00</span>
-                            </div>
-                        </a><a href="#" class="text-center text-decoration-none" style="color: #8A6342">
-                            <img src="assets/b2 1.png" alt="b2">
-                            <div class="d-grid">
-                                <span class="fw-bold">Bible (Not Bubble Bath)</span>
-                                <span>Young Adult</span>
-                                <span class="fw-bold">P100.00</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="d-flex justify-content-evenly">
-                        <a href="#" class="text-center text-decoration-none" style="color: #8A6342">
-                            <img src="assets/b2 1.png" alt="b2">
-                            <div class="d-grid">
-                                <span class="fw-bold">Bible (Not Bubble Bath)</span>
-                                <span>Young Adult</span>
-                                <span class="fw-bold">P100.00</span>
-                            </div>
-                        </a>
-                        <a href="#" class="text-center text-decoration-none" style="color: #8A6342">
-                            <img src="assets/b2 1.png" alt="b2">
-                            <div class="d-grid">
-                                <span class="fw-bold">Bible (Not Bubble Bath)</span>
-                                <span>Young Adult</span>
-                                <span class="fw-bold">P100.00</span>
-                            </div>
-                        </a><a href="#" class="text-center text-decoration-none" style="color: #8A6342">
-                            <img src="assets/b2 1.png" alt="b2">
-                            <div class="d-grid">
-                                <span class="fw-bold">Bible (Not Bubble Bath)</span>
-                                <span>Young Adult</span>
-                                <span class="fw-bold">P100.00</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="d-flex justify-content-evenly">
-                        <a href="#" class="text-center text-decoration-none" style="color: #8A6342">
-                            <img src="assets/b2 1.png" alt="b2">
-                            <div class="d-grid">
-                                <span class="fw-bold">Bible (Not Bubble Bath)</span>
-                                <span>Young Adult</span>
-                                <span class="fw-bold">P100.00</span>
-                            </div>
-                        </a>
-                        <a href="#" class="text-center text-decoration-none" style="color: #8A6342">
-                            <img src="assets/b2 1.png" alt="b2">
-                            <div class="d-grid">
-                                <span class="fw-bold">Bible (Not Bubble Bath)</span>
-                                <span>Young Adult</span>
-                                <span class="fw-bold">P100.00</span>
-                            </div>
-                        </a><a href="#" class="text-center text-decoration-none" style="color: #8A6342">
-                            <img src="assets/b2 1.png" alt="b2">
-                            <div class="d-grid">
-                                <span class="fw-bold">Bible (Not Bubble Bath)</span>
-                                <span>Young Adult</span>
-                                <span class="fw-bold">P100.00</span>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-
-                <!-- CATEGORY CARDS -->
-                <div class="container my-5 d-grid gap-3">
-                    <div class="row">
-                        <div class="col-sm-6 mb-3 mb-sm-0">
-                            <div class="card border-0 rounded-0" style="background-color: #F1F1F1;">
-                                <div class="card-body">
-                                    <img src="assets/Crime and Thriller 1.png" alt="crime and thriller">
-                                </div>
-                                <div class="card-footer d-flex flex-row align-items-center bg-transparent  border-3">
-                                    <div class="flex-grow-1 d-grid">
-                                        <span class="fs-4">Crime and Thriller</span>
-                                        <span>Discover a dark new corner</span>
-                                    </div>
-                                    <a href="#" class="btn text-white" style="background-color: #8A6342;">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="card border-0 rounded-0" style="background-color: #F1F1F1;">
-                                <div class="card-body">
-                                    <img src="assets/Crime and Thriller 1.png" alt="crime and thriller">
-                                </div>
-                                <div class="card-footer d-flex flex-row align-items-center bg-transparent  border-3">
-                                    <div class="flex-grow-1 d-grid">
-                                        <span class="fs-4">Crime and Thriller</span>
-                                        <span>Discover a dark new corner</span>
-                                    </div>
-                                    <a href="#" class="btn text-white" style="background-color: #8A6342;">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 mb-3 mb-sm-0">
-                            <div class="card border-0 rounded-0" style="background-color: #F1F1F1;">
-                                <div class="card-body">
-                                    <img src="assets/Crime and Thriller 1.png" alt="crime and thriller">
-                                </div>
-                                <div class="card-footer d-flex flex-row align-items-center bg-transparent  border-3">
-                                    <div class="flex-grow-1 d-grid">
-                                        <span class="fs-4">Crime and Thriller</span>
-                                        <span>Discover a dark new corner</span>
-                                    </div>
-                                    <a href="#" class="btn text-white" style="background-color: #8A6342;">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="card border-0 rounded-0" style="background-color: #F1F1F1;">
-                                <div class="card-body">
-                                    <img src="assets/Crime and Thriller 1.png" alt="crime and thriller">
-                                </div>
-                                <div class="card-footer d-flex flex-row align-items-center bg-transparent  border-3">
-                                    <div class="flex-grow-1 d-grid">
-                                        <span class="fs-4">Crime and Thriller</span>
-                                        <span>Discover a dark new corner</span>
-                                    </div>
-                                    <a href="#" class="btn text-white" style="background-color: #8A6342;">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 mb-3 mb-sm-0">
-                            <div class="card border-0 rounded-0" style="background-color: #F1F1F1;">
-                                <div class="card-body">
-                                    <img src="assets/Crime and Thriller 1.png" alt="crime and thriller">
-                                </div>
-                                <div class="card-footer d-flex flex-row align-items-center bg-transparent  border-3">
-                                    <div class="flex-grow-1 d-grid">
-                                        <span class="fs-4">Crime and Thriller</span>
-                                        <span>Discover a dark new corner</span>
-                                    </div>
-                                    <a href="#" class="btn text-white" style="background-color: #8A6342;">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="card border-0 rounded-0" style="background-color: #F1F1F1;">
-                                <div class="card-body">
-                                    <img src="assets/Crime and Thriller 1.png" alt="crime and thriller">
-                                </div>
-                                <div class="card-footer d-flex flex-row align-items-center bg-transparent  border-3">
-                                    <div class="flex-grow-1 d-grid">
-                                        <span class="fs-4">Crime and Thriller</span>
-                                        <span>Discover a dark new corner</span>
-                                    </div>
-                                    <a href="#" class="btn text-white" style="background-color: #8A6342;">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-2 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">3</h1>
+                        <p class="card-text text-center">Check availability and rental terms</p>
                     </div>
                 </div>
-
-
+                <div class="col-2 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">4</h1>
+                        <p class="card-text text-center">Initiate rental request</p>
+                    </div>
+                </div>
+                <div class="col-2 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">5</h1>
+                        <p class="card-text text-center">Agree on rental terms</p>
+                    </div>
+                </div>
+                <div class="col-2 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">6</h1>
+                        <p class="card-text text-center">Payment and security deposit</p>
+                    </div>
+                </div>
+                <div class="col-2 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">7</h1>
+                        <p class="card-text text-center">Book delivery or pick up</p>
+                    </div>
+                </div>
+                <div class="col-2 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">8</h1>
+                        <p class="card-text text-center">Rental period and return the book and security deposit</p>
+                    </div>
+                </div>
             </div>
+        </div>
 
-        </main>
-    </div>
-    <!-- 
-    <div id="faq" class="offset position-relative min-vh-100" style="background-color: #E0D8B0;">
-        <div class="position-absolute start-50 top-0 translate-middle" style="margin-top: 150px;">
-            <h1 class="fw-bold fs-1">Frequently Asked Questions</h1>
+        <!-- HINTS -->
+        <div id="hints" class="container-fluid offset px-0 min-vh-100 pt-4">
+            <h1 id="hints-head" class="mx-auto text-center w-25 mt-5 pb-2">Hints</h1>
+
+            <div id="carouselExampleIndicators" class="carousel slide mt-5">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="card mx-3 rounded-4" style="width: 18rem;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Book Buyback Prices Explained</h5>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">January 20, 2023</h6>
+                                    <p class="card-text mt-3" style="text-align: justify;">Sometimes you get a good buyback offer for a textbook and no offer for a piece of fiction. Why is it so?</p>
+                                    <a class="btn btn-outline-primary">Continue Reading</a>
+                                </div>
+
+                            </div>
+                            <div class="card mx-3 rounded-4" style="width: 18rem;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Book Buyback Prices Explained</h5>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">January 20, 2023</h6>
+                                    <p class="card-text mt-3" style="text-align: justify;">Sometimes you get a good buyback offer for a textbook and no offer for a piece of fiction. Why is it so?</p>
+                                    <a class="btn btn-outline-primary">Continue Reading</a>
+                                </div>
+                            </div>
+
+                            <div class="card mx-3 rounded-4" style="width: 18rem;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Book Buyback Prices Explained</h5>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">January 20, 2023</h6>
+                                    <p class="card-text mt-3" style="text-align: justify;">Sometimes you get a good buyback offer for a textbook and no offer for a piece of fiction. Why is it so?</p>
+                                    <a class="btn btn-outline-primary">Continue Reading</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-indicators position-relative mt-3">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="bg-primary active" aria-current="true" aria-label="Slide 1" style="border-radius: 50%; height: 15px; width: 15px;"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="bg-primary" aria-label="Slide 2" style="border-radius: 50%; height: 15px; width: 15px;"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="bg-primary" aria-label="Slide 3" style="border-radius: 50%; height: 15px; width: 15px;"></button>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ABOUT US -->
+        <div id="aboutUs" class="container-fluid px-0 min-vh-100 pt-4">
+            <h1 id="aboutUs-head" class="mx-auto text-center w-25 mt-5 pb-2">About Us</h1>
+            <p class="px-5 mt-4 fs-4 text-center">Welcome to <span style="color: #6CB6DA;">Book</span>Redux – an online platform where students and book enthusiasts come together to ignite their love for learning, sharing, and connecting. Our goal is to empower you to buy, sell, exchange, and rent books seamlessly, all while nurturing a vibrant community that celebrates the joy of reading.</p>
+
+            <div class="row text-center px-5 mt-5">
+                <div id="mission-vission" class="col mx-4 p-4">
+                    <h3>Mission Statement</h3>
+                    <p style="text-align: justify;">&emsp;Our mission is to build a lively online marketplace connecting students and book lovers, making it easy to buy, sell, rent, and exchange books. We're all about creating a community that values accessible, affordable, and sustainable reading. Our goal is to empower individuals in their quest for knowledge, personal development, and the joy of reading by facilitating book sharing and reuse.</p>
+                </div>
+                <div id="mission-vission" class="col mx-4 p-4">
+                    <h3>Vision Statement</h3>
+                    <p style="text-align: justify;">&emsp;Our vision is to transform how students and book lovers access used books. We want to be the top choice for affordable literary resources, creating a global community of passionate readers. With technology and shared enthusiasm, we aim to reshape knowledge sharing, fostering a sustainable and inclusive reading community.</p>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div id="why_us" class="offset position-relative min-vh-100" style="background-color: #DEA057;">
-        <div class="position-absolute start-50 top-0 translate-middle" style="margin-top: 150px;">
-            <h1 class="fw-bold fs-1">Why Us?</h1>
-        </div>
-    </div>
-
-    <div id="about_us" class="offset position-relative min-vh-100 bg-white">
-        <div class="position-absolute start-50 top-0 translate-middle" style="margin-top: 150px;">
-            <h1 class="fw-bold fs-1">About Us</h1>
-        </div>
-    </div> -->
-
 </body>
-
-<!-- <script src="bootstrap.min.js"></script> -->
 <script src="./bootstrap/bootstrap.bundle.min.js"></script>
 
 </html>
