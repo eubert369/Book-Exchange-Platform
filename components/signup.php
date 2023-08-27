@@ -4,6 +4,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookRedux | Signup</title>
+    <link rel="icon" href="../assets/Book_Logo.png">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css?v=<?php echo time(); ?>">
+</head>
+
+<body>
+    <div class="container-fluid p-4">
+        <h1 id="create-acct" class="text-center fw-bold mx-auto w-50 pb-1">Create Account</h1>
+        <div class="row px-0">
+            <div class="col px-0 py-0 mx-2">
+                <div class="border border-2 shadow fillup-form pb-3">
+                    <div class="orange-design"></div>
+                    <div class="d-flex px-3 py-2 pb-4 flex-row">
+                        <div class="d-flex justify-content-center flex-column w-50">
+                            <div class="mx-2 d-flex justify-content-center">
+                                <!-- <label for="firstName">First Name</label> -->
+                                <input class="w-75 mt-3 fs-5 px-2" id="firstName" type="text" placeholder="First Name">
+                            </div>
+                            <div class="mx-2 d-flex justify-content-center">
+                                <!-- <label for="email">Email</label> -->
+                                <input class="w-75 mt-3 fs-5 px-2" id="email" type="email" placeholder="Email">
+                            </div>
+                            <div class="mx-2 d-flex justify-content-center">
+                                <!-- <label for="address">Address</label> -->
+                                <input class="w-75 mt-3 fs-5 px-2" id="address" type="text" placeholder="Address">
+                            </div>
+                            <div class="mx-2 d-flex justify-content-center">
+                                <!-- <label for="gender">Gender</label> <br> -->
+                                <select class="w-75 mt-4 fs-5 px-2" name="" id="gender">
+                                    <option value="" disabled selected>Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center flex-column w-50">
+                            <div class="mx-2 d-flex justify-content-center">
+                                <!-- <label for="lastName">Last Name</label> -->
+                                <input class="w-75 mt-3 fs-5 px-2" id="firstName" type="text" placeholder="Last Name">
+                            </div>
+                            <div class="mx-2 d-flex justify-content-center">
+                                <!-- <label for="phoneNumber">Phone Number</label> -->
+                                <input class="w-75 mt-3 fs-5 px-2" id="email" type="text" placeholder="Phone Number">
+                            </div>
+                            <div class="mx-2 d-flex justify-content-center">
+                                <!-- <label for="birthday">Birthday</label> -->
+                                <input class="w-75 mt-3 fs-5 px-2" id="address" type="text" placeholder="Birthday" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                            </div>
+                            <div class="mx-2 d-flex justify-content-center">
+                                <!-- <label for="age">Age</label> -->
+                                <input class="w-75 mt-3 fs-5 px-2" id="age" type="number" placeholder="Age">
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="border border-2 shadow mt-4 fillup-form pb-3">
+                    <div class="orange-design"></div>
+                    <div class="container-fluid px-4 py-2">
+                        <p>Kindly select genres that you are interested</p>
+                        <div class="row px-3">
+                            <div class="col">
+                                <input type="checkbox">
+                                <label for="">Educational</label><br>
+                                <input type="checkbox">
+                                <label for="">Romance & Saga</label><br>
+                                <input type="checkbox">
+                                <label for="">Fantasy & Adventure</label><br>
+                                <input type="checkbox">
+                                <label for="">Science Fiction</label><br>
+                                <input type="checkbox">
+                                <label for="">Historical Fiction</label>
+                            </div>
+                            <div class="col">
+                                <input type="checkbox">
+                                <label for="">Mystery & Suspense</label><br>
+                                <input type="checkbox">
+                                <label for="">Young Adult</label><br>
+                                <input type="checkbox">
+                                <label for="">Non-Fiction & Biography</label><br>
+                                <input type="checkbox">
+                                <label for="">Horror & Supernatural</label><br>
+                                <input type="checkbox">
+                                <label for="">Comedy & Satire</label>
+                            </div>
+                            <siv class="col">
+                                <input type="checkbox">
+                                <label for="">Poetry & Prose</label><br>
+                                <input type="checkbox">
+                                <label for="">Self-Help</label><br>
+                                <input type="checkbox">
+                                <label for="">Crime & Thriller</label>
+                            </siv>
+                        </div>
+                    </div>
+                    <!-- <div class="orange-design" style="background-color: white;"></div> -->
+                </div>
+
+            </div>
+            <div class="col-4 mx-2">
+                <div class="border border-2 shadow">
+                    <div class="orange-design"></div>
+                    <div class="px-5 pb-4 fillup-form">
+                        <!-- <label for="username">Username</label> -->
+                        <input class="w-100 fs-5 mb-3 px-2" id="username" type="text" placeholder="Username">
+                        <!-- <label for="password">Password</label> -->
+                        <input class="w-100 fs-5 mb-3 px-2" id="password" type="text" placeholder="Password">
+                        <span class="text-secondary">
+                            8 character minimum, case-sensitive.<br>
+                            Tip: Use upper and lowercase, numbers, and symbols for strong passwords.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="border border-2 mt-4 shadow">
+                    <div class="orange-design"></div>
+                    <div class="d-flex flex-column px-5 pb-3">
+                        <p class="text-center">Upload Profile Photo</p>
+                        <img class="img mx-auto rounded-circle border" src="../assets/accounts.png" alt="upload_profile" style="width: 120px;">
+                        <button class="btn w-100 w-50 mx-auto mt-3 upload-btn fw-bold">Upload</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a class="sign-up-btn btn mx-auto w-25 fw-bold">Sign Up</a>
+            <p class="mt-3">Already have an account? <a href="./login.php">Click here!</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/bookloopph-website-favicon-white.png">
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">    
     <title>Sign Up</title>
@@ -92,4 +231,4 @@
     })
 </script>
 
-</html>
+</html> -->
