@@ -41,18 +41,26 @@
 
 #howItWorks-head {
 	color: #003060;
-	border-bottom: 1px solid #003060;
+	/* border-bottom: 1px solid #003060; */
 }
 
 #howItWorks-header {
 	color: #414C68;;
 }
 
-#howItWorks-header span:hover {
+.howItWorks-btn:hover {
 	font-weight: bold;
 	color: #E55B13;
 	text-decoration: underline;
 	cursor: pointer;
+}
+
+#selling {
+	border-bottom: 2px solid #003060;
+}
+
+#buying-page, #exchange-page, #renting-page, #donate-page {
+	display: none;
 }
 
 .card-body {
@@ -69,12 +77,12 @@
 
 #hints-head {
 	color: #061874;
-	border-bottom: 1px solid #061874;
+	/* border-bottom: 1px solid #061874; */
 }
 
 #aboutUs-head {	
 	color: #061874;
-	border-bottom: 1px solid #061874;
+	/* display: ; */
 }
 
 #hints-btn {

@@ -8,78 +8,200 @@
     <link rel="icon" href="./assets/Book_Logo.png">
     <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./components/css/style.css?v=<?php echo time(); ?>">
+    <link href="./aos-master/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container-fluid p-0">
         <!-- NAV -->
-        <nav class="navbar navbar-expand-lg shadow bg-light fixed-top">
+        <nav class="navbar navbar-expand-lg shadow bg-light fixed-top" data-aos="fade-down" data-aos-duration="1000">
             <div class="container-fluid mx-3">
-                <a class="navbar-brand" href="#"><img src="./assets/Book_Logo.png" alt="Logo" width="130" class="img"></a>
+                <a class="navbar-brand" href="#"><img src="./assets/Book_Logo.png" alt="Logo" width="130" class="img" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item mx-2 px-3">
-                            <a class="nav-link fs-5" aria-current="page" href="#">Home</a>
+                            <a class="nav-link fs-5" aria-current="page" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Home">Home</a>
                         </li>
                         <li class="nav-item mx-2 px-3">
-                            <a class="nav-link fs-5" href="#howItWorks">How it Works</a>
+                            <a class="nav-link fs-5" href="#howItWorks" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="How it Works">How it Works</a>
                         </li>
                         <li class="nav-item mx-2 px-3">
-                            <a class="nav-link fs-5" href="#hints">Hints</a>
+                            <a class="nav-link fs-5" href="#hints" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Hints">Hints</a>
                         </li>
                         <li class="nav-item mx-2 px-3">
-                            <a class="nav-link fs-5" href="#aboutUs">About Us</a>
+                            <a class="nav-link fs-5" href="#aboutUs" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="About Us">About Us</a>
                         </li>
                     </ul>
                 </div>
                 <div class="d-flex">
-                    <a id="login-btn" href="./components/login.php" class="btn px-4 py-2 fw-bold">Login</a>
+                    <a id="login-btn" href="./components/login.php" class="btn px-4 py-2 fw-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Login">Login</a>
                 </div>
             </div>
         </nav>
 
         <!-- HOME -->
-        <div class="container-fluid offset border">
+        <div class="container-fluid offset">
             <div class="row min-vh-100 align-items-center">
-                <div id="landing-title" class="col mx-3">
+                <div id="landing-title" class="col mx-3" data-aos="fade-right" data-aos-duration="2000">
                     <h1 class="mx-2" style="font-size: 70px;">Uncover New Stories, Trade Used Pages</h1>
-                    <a id="signup-btn" href="./components/signup.php" class="btn fw-bold px-5 w-75 py-2 ms-2">Sign Up</a>                    
+                    <a id="signup-btn" href="./components/signup.php" class="btn fw-bold px-5 w-75 py-2 ms-2" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Sign Up">Sign Up</a>
                 </div>
                 <div class="col mx-3 d-flex justify-content-center">
-                    <img class="img" src="./assets/Reading-book.gif" alt="Image" width="350" height="350">
+                    <img class="img" src="./assets/Reading-book.gif" alt="Image" width="600" height="500">
                 </div>
             </div>
         </div>
 
         <!-- HOW IT WORKS -->
         <div id="howItWorks" class="container-fluid px-0 pt-5 min-vh-100 offset">
-            <h1 id="howItWorks-head" class="mx-auto text-center w-25 mt-5 pb-2">How it works</h1>
-            <div id="howItWorks-header" class="row w-75 mx-auto mt-4 px-5">
-                <div class="col text-center">
+            <h1 id="howItWorks-head" class="mx-auto text-center w-25 mt-5 pb-2" data-aos="fade-up" data-aos-duration="2000">How it works</h1>
+            <div id="howItWorks-header" class="row w-75 mx-auto mt-4 px-5" data-aos="fade-down" data-aos-duration="3000">
+                <div id="selling" class="col mx-2 text-center howItWorks-btn">
                     <span class="fs-5">Selling</span>
                 </div>
-                <div class="col text-center">
+                <div id="buying" class="col mx-2 text-center howItWorks-btn">
                     <span class="fs-5">Buying</span>
                 </div>
-                <div class="col text-center">
+                <div id="exchange" class="col mx-2 text-center howItWorks-btn">
                     <span class="fs-5">Exchange</span>
                 </div>
-                <div class="col text-center">
+                <div id="rent" class="col mx-2 text-center howItWorks-btn">
                     <span class="fs-5">Rent</span>
                 </div>
-                <div class="col text-center">
+                <div id="donate" class="col mx-2 text-center howItWorks-btn">
                     <span class="fs-5">Donate</span>
                 </div>
             </div>
 
-            <div class="row justify-content-center mt-5">
-                <div class="col-2 mx-4 mb-3 card border-0">
+            <!-- SELLING Instructions -->
+            <div id="selling-page" class="row justify-content-center mt-5" data-aos="fade-right" data-aos-duration="1500">
+                <div class="col-3 mx-4 mb-3 card border-0">
                     <div class="card-body">
                         <h1 id="howItWorks-num" class="card-title text-center">1</h1>
                         <p id="num-text" class="card-text text-center">Create an Account</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">2</h1>
+                        <p id="num-text" class="card-text text-center">Create book listings</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">3</h1>
+                        <p id="num-text" class="card-text text-center">Specify the available shipping and delivery options</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">4</h1>
+                        <p id="num-text" class="card-text text-center">Manage communication for a potential buyer</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">5</h1>
+                        <p id="num-text" class="card-text text-center">Finalize the sale</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">6</h1>
+                        <p id="num-text" class="card-text text-center">Payment disbursement</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BUYING Instructions -->
+            <div id="buying-page" class="row justify-content-center mt-5" data-aos="fade-right" data-aos-duration="1500">
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">1</h1>
+                        <p id="num-text" class="card-text text-center">Create an buy</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">2</h1>
+                        <p id="num-text" class="card-text text-center">Browse and search books</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">3</h1>
+                        <p id="num-text" class="card-text text-center">View book listings</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">4</h1>
+                        <p id="num-text" class="card-text text-center">Seller communication</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">5</h1>
+                        <p id="num-text" class="card-text text-center">Purchase and payment confirmation</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">6</h1>
+                        <p id="num-text" class="card-text text-center">Inspect the purchased book and confirm receipt</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXCHANGE Instructions -->
+            <div id="exchange-page" class="row justify-content-center mt-5" data-aos="fade-right" data-aos-duration="1500">
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">1</h1>
+                        <p id="num-text" class="card-text text-center">Create an exchange</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">2</h1>
+                        <p id="num-text" class="card-text text-center">Browse available books for exchange</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">3</h1>
+                        <p id="num-text" class="card-text text-center">Initiate exchange proposal</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">4</h1>
+                        <p id="num-text" class="card-text text-center">Negotiate and finalize exchange terms</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">5</h1>
+                        <p id="num-text" class="card-text text-center">Ship or arrange meet-up</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">6</h1>
+                        <p id="num-text" class="card-text text-center">Confirm the exchange</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RENTING Instructions -->
+            <div id="renting-page" class="row justify-content-center mt-5" data-aos="fade-right" data-aos-duration="1500">
+                <div class="col-2 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">1</h1>
+                        <p id="num-text" class="card-text text-center">Create a rent</p>
                     </div>
                 </div>
                 <div class="col-2 mx-4 mb-3 card border-0">
@@ -125,13 +247,53 @@
                     </div>
                 </div>
             </div>
+
+            <!-- DONATE Instructions -->
+            <div id="donate-page" class="row justify-content-center mt-5" data-aos="fade-right" data-aos-duration="1500">
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">1</h1>
+                        <p id="num-text" class="card-text text-center">Create an donate</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">2</h1>
+                        <p id="num-text" class="card-text text-center">List books for free</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">3</h1>
+                        <p id="num-text" class="card-text text-center">Manage communication</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">4</h1>
+                        <p id="num-text" class="card-text text-center">Donation confirmation</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">5</h1>
+                        <p id="num-text" class="card-text text-center">Shipping and delivery</p>
+                    </div>
+                </div>
+                <div class="col-3 mx-4 mb-3 card border-0">
+                    <div class="card-body">
+                        <h1 id="howItWorks-num" class="card-title text-center">6</h1>
+                        <p id="num-text" class="card-text text-center">Confirmation and acknowledgement</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- HINTS -->
         <div id="hints" class="container-fluid offset px-0 min-vh-100 pt-4">
-            <h1 id="hints-head" class="mx-auto text-center w-25 mt-5 pb-2">Hints</h1>
+            <h1 id="hints-head" class="mx-auto text-center w-25 mt-5 pb-2" data-aos="fade-up" data-aos-duration="2000">Hints</h1>
 
-            <div id="carouselExampleIndicators" class="carousel slide mt-5">
+            <div id="carouselExampleIndicators" class="carousel slide mt-5" data-aos="fade-right" data-aos-duration="2500">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="d-flex flex-row justify-content-center">
@@ -188,15 +350,15 @@
 
         <!-- ABOUT US -->
         <div id="aboutUs" class="container-fluid px-0 min-vh-100 pt-4">
-            <h1 id="aboutUs-head" class="mx-auto text-center w-25 mt-5 pb-2">About Us</h1>
-            <p class="px-5 mt-4 fs-4 text-center">Welcome to <span style="color: #6CB6DA;">Book</span>Redux – an online platform where students and book enthusiasts come together to ignite their love for learning, sharing, and connecting. Our goal is to empower you to buy, sell, exchange, and rent books seamlessly, all while nurturing a vibrant community that celebrates the joy of reading.</p>
+            <h1 id="aboutUs-head" class="mx-auto text-center w-25 mt-5 pb-2" data-aos="fade-up" data-aos-duration="2000">About Us</h1>
+            <p class="px-5 mt-4 fs-4 text-center" data-aos="fade-right" data-aos-duration="3000">Welcome to <span style="color: #6CB6DA;">Book</span>Redux – an online platform where students and book enthusiasts come together to ignite their love for learning, sharing, and connecting. Our goal is to empower you to buy, sell, exchange, and rent books seamlessly, all while nurturing a vibrant community that celebrates the joy of reading.</p>
 
             <div class="row text-center px-5 mt-5">
-                <div id="mission-vission" class="col mx-4 p-4 rounded-4">
+                <div id="mission-vission" class="col mx-4 p-4 rounded-4" data-aos="zoom-in-up" data-aos-duration="2000">
                     <h3>Mission Statement</h3>
                     <p style="text-align: justify;">&emsp;Our mission is to build a lively online marketplace connecting students and book lovers, making it easy to buy, sell, rent, and exchange books. We're all about creating a community that values accessible, affordable, and sustainable reading. Our goal is to empower individuals in their quest for knowledge, personal development, and the joy of reading by facilitating book sharing and reuse.</p>
                 </div>
-                <div id="mission-vission" class="col mx-4 p-4 rounded-4">
+                <div id="mission-vission" class="col mx-4 p-4 rounded-4" data-aos="zoom-in-up" data-aos-duration="2500">
                     <h3>Vision Statement</h3>
                     <p style="text-align: justify;">&emsp;Our vision is to transform how students and book lovers access used books. We want to be the top choice for affordable literary resources, creating a global community of passionate readers. With technology and shared enthusiasm, we aim to reshape knowledge sharing, fostering a sustainable and inclusive reading community.</p>
                 </div>
@@ -205,5 +367,11 @@
     </div>
 </body>
 <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./aos-master/dist/aos.js"></script>
+<script src="./components/js/app.js"></script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
 
 </html>

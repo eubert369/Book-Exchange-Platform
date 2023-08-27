@@ -8,12 +8,13 @@
     <link rel="icon" href="../assets/Book_Logo.png">
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css?v=<?php echo time(); ?>">
+    <link href="../aos-master/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container-fluid px-0 py-3 d-flex min-vh-100">
-        <a href="../index.php" class="position-absolute mx-4 my-1 navbar-brand pb-3 px-2"><img class="img" src="../assets/Book_Logo.png" alt="Logo"></a>
-        <div class="mx-auto login-orange px-5 align-self-center py-2 rounded-3 shadow fillup-form" style="width: 503px;">
+        <a href="../index.php" class="position-absolute mx-4 my-1 navbar-brand pb-3 px-2" data-aos="fade-right" data-aos-duration="2000"><img class="img" src="../assets/Book_Logo.png" alt="Logo"></a>
+        <div class="mx-auto login-orange px-5 align-self-center py-2 rounded-3 shadow fillup-form" data-aos="zoom-in-up" data-aos-duration="2000" style="width: 503px;">
             <h2 class="fw-bold text-center mb-5">Log In</h2>
             <input class="w-100 fs-5 mb-3 px-2" id="username" type="text" placeholder="Username">
             <input class="w-100 fs-5 mb-5 px-2" id="password" type="text" placeholder="Password">
@@ -25,7 +26,8 @@
     </div>
 </body>
 <script src="../bootstrap/bootstrap.bundle.min.js"></script>
-
+<script src="../aos-master/dist/aos.js"></script>
+<script>AOS.init();</script>
 </html>
 <!-- <!DOCTYPE html>
 <html lang="en">
