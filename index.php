@@ -29,7 +29,7 @@
                             <a class="nav-link fs-5" href="#howItWorks" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="How it Works">How it Works</a>
                         </li>
                         <li class="nav-item mx-2 px-3">
-                            <a class="nav-link fs-5" href="#hints" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Hints">Hints</a>
+                            <a class="nav-link fs-5" href="#hints" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Hints">Resources</a>
                         </li>
                         <li class="nav-item mx-2 px-3">
                             <a class="nav-link fs-5" href="#aboutUs" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="About Us">About Us</a>
@@ -50,7 +50,7 @@
                     <a id="signup-btn" href="./components/signup.php" class="btn fw-bold px-5 w-75 py-2 ms-2" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Sign Up">Sign Up</a>
                 </div>
                 <div class="col mx-3 d-flex justify-content-center">
-                    <img class="img" src="./assets/Reading-book.gif" alt="Image" width="600" height="500">
+                    <img class="img" src="./assets/Reading-book.gif" alt="Image" width="600" height="500" data-aos="fade-left" data-aos-duration="3000">
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@
                 <div class="col-3 mx-4 mb-3 card border-0">
                     <div class="card-body">
                         <h1 id="howItWorks-num" class="card-title text-center">1</h1>
-                        <p id="num-text" class="card-text text-center">Create an buy</p>
+                        <p id="num-text" class="card-text text-center">Create an Account</p>
                     </div>
                 </div>
                 <div class="col-3 mx-4 mb-3 card border-0">
@@ -161,7 +161,7 @@
                 <div class="col-3 mx-4 mb-3 card border-0">
                     <div class="card-body">
                         <h1 id="howItWorks-num" class="card-title text-center">1</h1>
-                        <p id="num-text" class="card-text text-center">Create an exchange</p>
+                        <p id="num-text" class="card-text text-center">Create an Account</p>
                     </div>
                 </div>
                 <div class="col-3 mx-4 mb-3 card border-0">
@@ -201,7 +201,7 @@
                 <div class="col-2 mx-4 mb-3 card border-0">
                     <div class="card-body">
                         <h1 id="howItWorks-num" class="card-title text-center">1</h1>
-                        <p id="num-text" class="card-text text-center">Create a rent</p>
+                        <p id="num-text" class="card-text text-center">Create a Account</p>
                     </div>
                 </div>
                 <div class="col-2 mx-4 mb-3 card border-0">
@@ -253,7 +253,7 @@
                 <div class="col-3 mx-4 mb-3 card border-0">
                     <div class="card-body">
                         <h1 id="howItWorks-num" class="card-title text-center">1</h1>
-                        <p id="num-text" class="card-text text-center">Create an donate</p>
+                        <p id="num-text" class="card-text text-center">Create an Account</p>
                     </div>
                 </div>
                 <div class="col-3 mx-4 mb-3 card border-0">
@@ -291,7 +291,7 @@
 
         <!-- HINTS -->
         <div id="hints" class="container-fluid offset px-0 min-vh-100 pt-4">
-            <h1 id="hints-head" class="mx-auto text-center w-25 mt-5 pb-2" data-aos="fade-up" data-aos-duration="2000">Hints</h1>
+            <h1 id="hints-head" class="mx-auto text-center w-25 mt-5 pb-2" data-aos="fade-up" data-aos-duration="2000">Resources</h1>
 
             <div id="carouselExampleIndicators" class="carousel slide mt-5" data-aos="fade-right" data-aos-duration="2500">
                 <div class="carousel-inner">

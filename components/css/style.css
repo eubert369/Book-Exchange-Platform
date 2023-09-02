@@ -151,6 +151,10 @@ select:focus {
 	border-bottom: 1px solid;
 }
 
+/* #pass-tip {
+	color: red;
+} */
+
 .upload-btn {
 	border: 1px solid #003060;
 	color: #003060;
@@ -179,6 +183,7 @@ select:focus {
 	border-bottom: 1px solid #DDDBDB;
 	border-right: 1px solid #DDDBDB;
 }
+
 
 /* * {
 	font-family: "Inria Sans", sans-serif;
