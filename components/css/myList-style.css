@@ -1,0 +1,37 @@
+.book-status {
+    background-color: #E55B13;
+    color: white;
+}
+
+.book-status:hover {
+    background-color: white;
+    border: 1px solid #E55B13;
+    color: #E55B13;
+}
+
+.order {
+    color: #003060;
+}
+
+.create-btn {
+    border: 1px solid #E55B13;
+    color: #E55B13;
+}
+
+.create-btn:hover {
+    background-color: #E55B13;
+    color: white;
+}
+
+.contents, .card-body, .card-foot {
+    color: #003060;
+}
+
+.edit-book {
+    color: #E55B13;
+    cursor: pointer;
+}
+
+input, select, textarea, button {
+    border: 1px solid #003060;
+}

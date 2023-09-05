@@ -123,6 +123,13 @@ h3, h2 {
 	background-color: #E55B13;
 }
 
+.signup-form {
+	border-left: 20px solid #E55B13;
+	border-top: 1px solid #DDDBDB;
+	border-bottom: 1px solid #DDDBDB;
+	border-right: 1px solid #DDDBDB;
+}
+
 .fillup-form {
 	color: #003060;	
 }
@@ -172,7 +179,7 @@ select:focus {
 
 .sign-up-btn:hover {
 	border: 1px solid #E55B13;
-	color: #003060;
+	color: #E55B13;
 }
 
 /* login/php */

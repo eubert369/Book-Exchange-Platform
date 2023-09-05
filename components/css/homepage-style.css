@@ -19,15 +19,15 @@
     width: 100vw;
 } */
 
-.head-nav {
+/* .head-nav {
     height: 80px;
-}
+} */
 
 .profile-content {
     font-size: smaller;
 }
 
-.home {
+#home-side-btn {
     background-color: #2D6092;
 }
 

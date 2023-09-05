@@ -51,7 +51,7 @@
                                 exit();
                             }
                         } else {
-                            echo '<p class="text-danger mt-1 text-center">Incorrect username or password</p>';
+                            echo '<p class="text-danger fw-bold mt-1 text-center">Incorrect username or password</p>';
                         }
 
                     } catch (\Throwable $th) {

@@ -57,8 +57,8 @@
 
         <!-- HOW IT WORKS -->
         <div id="howItWorks" class="container-fluid px-0 pt-5 min-vh-100 offset">
-            <h1 id="howItWorks-head" class="mx-auto text-center w-25 mt-5 pb-2" data-aos="fade-up" data-aos-duration="2000">How it works</h1>
-            <div id="howItWorks-header" class="row w-75 mx-auto mt-4 px-5" data-aos="fade-down" data-aos-duration="3000">
+            <h1 id="howItWorks-head" class="mx-auto text-center w-25 mt-5 pb-2" data-aos="fade-up" data-aos-duration="1000">How it works</h1>
+            <div id="howItWorks-header" class="row w-75 mx-auto mt-4 px-5" data-aos="fade-down" data-aos-duration="2000">
                 <div id="selling" class="col mx-2 text-center howItWorks-btn">
                     <span class="fs-5">Selling</span>
                 </div>
@@ -70,9 +70,6 @@
                 </div>
                 <div id="rent" class="col mx-2 text-center howItWorks-btn">
                     <span class="fs-5">Rent</span>
-                </div>
-                <div id="donate" class="col mx-2 text-center howItWorks-btn">
-                    <span class="fs-5">Donate</span>
                 </div>
             </div>
 
@@ -248,47 +245,6 @@
                 </div>
             </div>
 
-            <!-- DONATE Instructions -->
-            <div id="donate-page" class="row justify-content-center mt-5" data-aos="fade-right" data-aos-duration="1500">
-                <div class="col-3 mx-4 mb-3 card border-0">
-                    <div class="card-body">
-                        <h1 id="howItWorks-num" class="card-title text-center">1</h1>
-                        <p id="num-text" class="card-text text-center">Create an Account</p>
-                    </div>
-                </div>
-                <div class="col-3 mx-4 mb-3 card border-0">
-                    <div class="card-body">
-                        <h1 id="howItWorks-num" class="card-title text-center">2</h1>
-                        <p id="num-text" class="card-text text-center">List books for free</p>
-                    </div>
-                </div>
-                <div class="col-3 mx-4 mb-3 card border-0">
-                    <div class="card-body">
-                        <h1 id="howItWorks-num" class="card-title text-center">3</h1>
-                        <p id="num-text" class="card-text text-center">Manage communication</p>
-                    </div>
-                </div>
-                <div class="col-3 mx-4 mb-3 card border-0">
-                    <div class="card-body">
-                        <h1 id="howItWorks-num" class="card-title text-center">4</h1>
-                        <p id="num-text" class="card-text text-center">Donation confirmation</p>
-                    </div>
-                </div>
-                <div class="col-3 mx-4 mb-3 card border-0">
-                    <div class="card-body">
-                        <h1 id="howItWorks-num" class="card-title text-center">5</h1>
-                        <p id="num-text" class="card-text text-center">Shipping and delivery</p>
-                    </div>
-                </div>
-                <div class="col-3 mx-4 mb-3 card border-0">
-                    <div class="card-body">
-                        <h1 id="howItWorks-num" class="card-title text-center">6</h1>
-                        <p id="num-text" class="card-text text-center">Confirmation and acknowledgement</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- HINTS -->
         <div id="hints" class="container-fluid offset px-0 min-vh-100 pt-4">
             <h1 id="hints-head" class="mx-auto text-center w-25 mt-5 pb-2" data-aos="fade-up" data-aos-duration="2000">Resources</h1>
@@ -351,7 +307,7 @@
         <!-- ABOUT US -->
         <div id="aboutUs" class="container-fluid px-0 min-vh-100 pt-4">
             <h1 id="aboutUs-head" class="mx-auto text-center w-25 mt-5 pb-2" data-aos="fade-up" data-aos-duration="2000">About Us</h1>
-            <p class="px-5 mt-4 fs-4 text-center" data-aos="fade-right" data-aos-duration="3000">Welcome to <span style="color: #6CB6DA;">Book</span>Redux – an online platform where students and book enthusiasts come together to ignite their love for learning, sharing, and connecting. Our goal is to empower you to buy, sell, exchange, and rent books seamlessly, all while nurturing a vibrant community that celebrates the joy of reading.</p>
+            <p class="px-5 mt-4 fs-4 text-center" data-aos="fade-right" data-aos-duration="3000">Welcome to <span style="color: #E55B13;">Book</span>Redux – an online platform where students and book enthusiasts come together to ignite their love for learning, sharing, and connecting. Our goal is to empower you to buy, sell, exchange, and rent books seamlessly, all while nurturing a vibrant community that celebrates the joy of reading.</p>
 
             <div class="row text-center px-5 mt-5">
                 <div id="mission-vission" class="col mx-4 p-4 rounded-4" data-aos="zoom-in-up" data-aos-duration="2000">
