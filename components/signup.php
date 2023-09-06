@@ -74,7 +74,7 @@
                     <div class="col container-fluid px-4 py-2">
                         <p class="fw-bold">Kindly select genres that you are interested</p>
                         <div class="row px-3">
-                            <div class="col">
+                            <div class="col-4">
                                 <input type="checkbox" name="interest[]" id="educational" value="Educational">
                                 <label for="educational">Educational</label><br>
                                 <input type="checkbox" name="interest[]" id="romance" value="Romance & Saga">
@@ -98,7 +98,7 @@
                                 <input type="checkbox" name="interest[]" id="comedy" value="Comedy & Satire">
                                 <label for="comedy">Comedy & Satire</label>
                             </div>
-                            <div class="col">
+                            <div class="col-3">
                                 <input type="checkbox" name="interest[]" id="poetry" value="Poetry & Prose">
                                 <label for="poetry">Poetry & Prose</label><br>
                                 <input type="checkbox" name="interest[]" id="self-help" value="Self-Help">

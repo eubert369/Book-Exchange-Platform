@@ -83,7 +83,7 @@ if (isset($user) && isset($pass)) {
                         </li>
                         <li class="btn nav-item d-flex flex-row w-100 px-5 py-0">
                             <i class="d-flex align-items-center"><img src="../assets/logout.png" alt="home icon" width="20" class="img"></i>
-                            <a href="#" class="nav-link">Logout</a>
+                            <a href="../index.php" class="nav-link">Logout</a>
                         </li>
                     </ul>
                 </div>
