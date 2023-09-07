@@ -50,7 +50,11 @@ function createUser()
             $sql = "INSERT INTO `users`(`First_Name`, `Last_Name`, `Email`, `Phone_Number`, `Address`, `Birthday`, `Gender`, `Age`, `Username`, `Password`, `Interest`, `Profile_Photo`) VALUES ('$first_name','$last_name','$email','$phone_number','$address','$birthday','$gender','$age','$username','$password','$serialized_interest','$profile_photo')";
             $conn->query($sql);
             $conn->close();
-            header("Location: ../homepage.php");            
+            session_start();
+            $_SESSION["user"] = $username;
+            $_SESSION["pass"] = $password;
+            header("Location: ../homepage.php");
+            exit();
         } catch (\Throwable $th) {
             echo $th;
         }

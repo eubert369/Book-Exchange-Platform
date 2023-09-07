@@ -1,6 +1,20 @@
 <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="./css/homepage-style.css?v=<?php echo time(); ?>">
-
+<ul class="nav bg-light fixed-top head-nav shadow py-2 px-4">
+    <div class="w-100 d-flex justify-content-between mt-1 p-0">
+        <input class="border rounded-3 px-3 w-100" type="text" placeholder="Search">
+        <a href="../index.php" class="pb-2 px-2"><img class="img" src="../assets/Book_Logo.png" alt="Logo"></a>
+    </div>
+    <div class="my-1 w-100">
+        <a class="mx-2" id="daily-discover-anchor" href="#daily-discover">Daily Discover</a>
+        <a class="mx-2" id="featured-anchor" href="#featured">Featured</a>
+        <a class="mx-2" id="recommended-anchor" href="#recommended">Recommended for you</a>
+        <a class="mx-2" id="check_this_out-anchor" href="#check_this_out">Check this out</a>
+        <a class="mx-2" id="for_sale-anchor" href="#for_sale">For sale</a>
+        <a class="mx-2" id="for_exchange-anchor" href="#for_exchange">For exchange</a>
+        <a class="mx-2" id="for_rent-anchor" href="#for_rent">For rent</a>
+    </div>
+</ul>
 <div id="daily-discover" class="mx-2 px-3">
     <h4 id="daily-discover-header">Daily Discover</h4>
     <div id="content-cards" class="w-100 mx-2 d-flex px-4 overflow-x-auto" style="height: 300px; ">

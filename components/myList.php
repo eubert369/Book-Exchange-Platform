@@ -1,6 +1,25 @@
 <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="./css/myList-style.css?v=<?php echo time(); ?>">
-<div class="container-fuid px-3">
+<style>
+    input,
+    select,
+    .modal,
+    textarea {
+        color: #003060;
+    }
+
+    #exchange,
+    #rent {
+        display: none;
+    }
+</style>
+<ul class="nav bg-light fixed-top head-nav shadow py-3 px-4">
+    <div class="w-100 d-flex justify-content-between mt-1 p-0">
+        <input class="border rounded-3 px-3 w-100" type="text" placeholder="Search">
+        <a href="../index.php" class="pb-2 px-2"><img class="img" src="../assets/Book_Logo.png" alt="Logo"></a>
+    </div>
+</ul>
+<div class="container-fuid pt-5 mt-5 px-3">
     <div class="row border mx-2 mt-3 p-3 shadow rounded">
         <div class="col d-flex align-items-center">
             <p class="fs-3 order mx-auto fw-bold m-0">Order Status</p>
@@ -160,40 +179,129 @@
         <div class="modal-content">
             <div class="modal-header border-0">
                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Add listing for </h1>
-                <select name="" class="btn mx-2 px-0" id="modal-category">
+                <select name="" class="btn mx-2 fw-bold px-0" id="modal-category">
                     <option value="Sale">Sale</option>
                     <option value="Exchange">Exchange</option>
                     <option value="Rent">Rent</option>
                 </select>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body container-fluid px-5">                
+
+            <!-- sale -->
+            <div id="sale" class="modal-body container-fluid px-5">
                 <div class="row">
-                    <div class="col-5 me-1 border rounded">
-                        sample
+                    <div class="col-5 me-1 px-0 border mb-2 rounded">
+                        <input type="file" id="image" class="d-none">
+                        <label for="image" class="position-relative w-100 h-100" style="cursor: pointer;"><img src="../assets/image.png" alt="image" class="img-fluid w-100 position-absolute top-50 start-50 translate-middle" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Upload Image"></label>
+
                     </div>
                     <div class="col">
-                        <select name="" id="" class="w-100 mb-2 px-3 rounded">
+                        <select name="" id="" class="w-100 mb-2 px-3 bg-light rounded">
                             <option value="">Genre</option>
                         </select>
-                        <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="price">
+                        <input type="text" id="price" class="w-100 mb-2 px-3 rounded" placeholder="Price">
+                        <!-- <input type="text" id="edition-exchange" class="w-100 mb-2 px-3 rounded" placeholder="Edition"> -->
                         <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Shipping Fee">
-                        <select name="" id="" class="w-100 mb-2 px-3 rounded">
+                        <select name="" id="" class="w-100 mb-2 px-3 bg-light rounded">
                             <option value="">Condition</option>
                         </select>
                         <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Language">
                     </div>
                     <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Title">
                     <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Author">
+                    <input type="text" id="edition-sale" class="w-100 mb-2 px-3 rounded" placeholder="Edition">
+                    <!-- <textarea name="" id="exchange-preferences" class="px-3 rounded mb-2" cols="30" rows="4" placeholder="Exchange Preferences"></textarea> -->
+                    <textarea name="" id="" class="px-3 rounded" cols="30" rows="4" placeholder="Description"></textarea>
+                </div>
+            </div>
+
+            <!-- exchange -->
+            <div id="exchange" class="modal-body container-fluid px-5">
+                <div class="row">
+                    <div class="col-5 me-1 border px-0 mb-2 rounded">
+                        <input type="file" id="image" class="d-none">
+                        <label for="image" class="position-relative w-100 h-100" style="cursor: pointer;"><img src="../assets/image.png" alt="image" class="img-fluid w-100 position-absolute top-50 start-50 translate-middle" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Upload Image"></label>
+
+                    </div>
+                    <div class="col">
+                        <select name="" id="" class="w-100 mb-2 px-3 bg-light rounded">
+                            <option value="">Genre</option>
+                        </select>
+                        <!-- <input type="text" id="price" class="w-100 mb-2 px-3 rounded" placeholder="Price"> -->
+                        <input type="text" id="edition-exchange" class="w-100 mb-2 px-3 rounded" placeholder="Edition">
+                        <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Shipping Fee">
+                        <select name="" id="" class="w-100 mb-2 px-3 bg-light rounded">
+                            <option value="">Condition</option>
+                        </select>
+                        <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Language">
+                    </div>
+                    <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Title">
+                    <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Author">
+                    <!-- <input type="text" id="edition-sale" class="w-100 mb-2 px-3 rounded" placeholder="Edition"> -->
+                    <textarea name="" id="exchange-preferences" class="px-3 rounded mb-2" cols="30" rows="4" placeholder="Exchange Preferences"></textarea>
+                    <textarea name="" id="" class="px-3 rounded" cols="30" rows="4" placeholder="Description"></textarea>
+                </div>
+            </div>
+
+            <!-- rent -->
+            <div id="rent" class="modal-body container-fluid px-5">
+                <div class="row">
+                    <div class="col-5 px-0 me-1 border mb-2 rounded">
+                        <input type="file" id="image" class="d-none">
+                        <label for="image" class="position-relative w-100 h-100" style="cursor: pointer;"><img src="../assets/image.png" alt="image" class="img-fluid w-100 position-absolute top-50 start-50 translate-middle" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Upload Image"></label>
+
+                    </div>
+                    <div class="col">
+                        <select name="" id="" class="w-100 mb-2 px-3 bg-light rounded">
+                            <option value="">Genre</option>
+                        </select>
+                        <!-- <input type="text" id="price" class="w-100 mb-2 px-3 rounded" placeholder="Price"> -->
+                        <input type="text" id="" class="w-100 mb-2 px-3 rounded" placeholder="Condition">
+                        <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Shipping Fee">
+                        <input type="text" id="" class="w-100 mb-2 px-3 rounded" placeholder="Rental Price">
+                        <!-- <select name="" id="" class="w-100 mb-2 px-3 bg-light rounded">
+                            <option value="">Condition</option>
+                        </select> -->
+                        <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Security Deposit">
+                    </div>
+                    <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Title">
+                    <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Author">
                     <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Edition">
+                    <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Language">
+                    <input type="text" class="w-100 mb-2 px-3 rounded" placeholder="Rental Duration">
+                    <!-- <input type="text" id="edition-sale" class="w-100 mb-2 px-3 rounded" placeholder="Edition"> -->
+                    <textarea name="" id="exchange-preferences" class="px-3 rounded mb-2" cols="30" rows="4" placeholder="Rental Terms and Condition"></textarea>
                     <textarea name="" id="" class="px-3 rounded" cols="30" rows="4" placeholder="Description"></textarea>
                 </div>
             </div>
             <div class="modal-footer border-0">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                <button type="button" class="btn mx-auto w-25 text-white rounded-3" style="background-color: #E55B13;">List</button>
             </div>
         </div>
     </div>
 </div>
 <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+    var list_category = document.getElementById("modal-category");
+
+    list_category.addEventListener("change", function() {
+        // console.log(String(list_category.value));
+        if (list_category.value == "Sale") {
+            document.getElementById("sale").style.display = "flex";
+            document.getElementById("exchange").style.display = "none";
+            document.getElementById("rent").style.display = "none";
+        } else if (list_category.value == "Exchange") {
+            document.getElementById("sale").style.display = "none";
+            document.getElementById("exchange").style.display = "flex";
+            document.getElementById("rent").style.display = "none";
+        } else if (list_category.value == "Rent") {
+            document.getElementById("sale").style.display = "none";
+            document.getElementById("exchange").style.display = "none";
+            document.getElementById("rent").style.display = "flex";
+        }
+    })
+</script>

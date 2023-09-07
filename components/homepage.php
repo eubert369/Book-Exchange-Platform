@@ -19,7 +19,7 @@ if (isset($user) && isset($pass)) {
         <link rel="stylesheet" href="./css/homepage-style.css?v=<?php echo time(); ?>">
     </head>
 
-    <body class="overflow-y-hidden">
+    <body>
         <div id="body-container" class="container-fluid px-0">
             <div class="row mx-0">
                 <div id="sidebar" class="col-3 sidebar p-2 min-vh-100">
@@ -56,7 +56,7 @@ if (isset($user) && isset($pass)) {
                         <li class="btn nav-item d-flex flex-row w-100 px-5 py-0">
                             <i class="d-flex align-items-center"><img src="../assets/book_trading-icon.png" alt="home icon" width="20" class="img"></i>
                             <a href="#" class="nav-link">Book Trading</a>
-                        </li>                        
+                        </li>
                         <li id="wishlist-side-btn" class="btn nav-item d-flex flex-row w-100 px-5 py-0">
                             <i class="d-flex align-items-center"><img src="../assets/wish_list-icon.png" alt="home icon" width="20" class="img"></i>
                             <a href="#" class="nav-link">Wish List</a>
@@ -83,12 +83,12 @@ if (isset($user) && isset($pass)) {
                         </li>
                         <li class="btn nav-item d-flex flex-row w-100 px-5 py-0">
                             <i class="d-flex align-items-center"><img src="../assets/logout.png" alt="home icon" width="20" class="img"></i>
-                            <a href="../index.php" class="nav-link">Logout</a>
+                            <a href="./php-queries/read.php" class="nav-link">Logout</a>
                         </li>
                     </ul>
                 </div>
                 <div id="content" class="col border content px-0">
-                    <ul class="nav bg-light head-nav shadow py-2 px-4">
+                    <!-- <ul class="nav bg-light head-nav shadow py-2 px-4">
                         <div class="w-100 d-flex justify-content-between mt-1 p-0">
                             <input class="border rounded-3 px-3 w-100" type="text" placeholder="Search">
                             <a href="../index.php" class="pb-2 px-2"><img class="img" src="../assets/Book_Logo.png" alt="Logo"></a>
@@ -102,16 +102,21 @@ if (isset($user) && isset($pass)) {
                             <a class="mx-2" id="for_exchange-anchor" href="#for_exchange">For exchange</a>
                             <a class="mx-2" id="for_rent-anchor" href="#for_rent">For rent</a>
                         </div>
-                    </ul>
-                    <iframe id="content-frame" class="h-100 w-100 border" src="./homepage-content.php" frameborder="0"></iframe>
+                    </ul> -->
+                    <!-- <div class="container-fluid"> -->
+                        <div class="d-flex h-100 w-100">
+                            <iframe id="content-frame" class="flex-fill w-100 border" src="./homepage-content.php" frameborder="0"></iframe>
+                        </div>
+                    <!-- </div> -->
                 </div>
     </body>
     <script src="../bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./js/app-homepage.js?v=<?php echo time(); ?>"></script>
+
     </html>
 <?php
 } else {
-    header("Location: login.php");
+    header("Location: ../index.php");
     exit();
 }
 ?>
